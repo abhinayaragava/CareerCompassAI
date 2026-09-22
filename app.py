@@ -114,6 +114,11 @@ def init_db():
     twelfth_columns = {
         "tenth_percentage": "TEXT",
         "tenth_board": "TEXT",
+        "favorite_subjects": "TEXT",
+        "interests_10th": "TEXT",
+        "activity_interest": "TEXT",
+        "career_interests_10th": "TEXT",
+        "after10_pathway": "TEXT",
         "twelfth_percentage": "TEXT",
         "twelfth_board": "TEXT",
         "twelfth_stream": "TEXT",
