@@ -1,0 +1,5742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile - CareerCompass AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body class="stage-{{ active_stage }}">
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        CareerCompass AI
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/dashboard">
+            Dashboard
+        </a>
+
+        <a href="/profile"
+           class="active">
+            Profile
+        </a>
+
+        <a href="/logout">
+            Logout
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= PROFILE ================= -->
+
+<main class="profile-container">
+
+
+    <!-- INTRO -->
+
+    <section class="profile-intro">
+
+        <div class="profile-badge">
+            PERSONALIZED CAREER GUIDANCE
+        </div>
+
+        <h1>
+            Build Your Career Profile
+        </h1>
+
+        <p>
+            CareerCompass AI uses your education, interests,
+            strengths and goals to guide you toward suitable
+            academic and career pathways.
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= EDUCATION STAGE ================= -->
+
+    <section class="profile-section">
+
+        <div class="section-heading">
+
+            <div class="section-number">
+                01
+            </div>
+
+            <div>
+
+                <h2>
+                    🎓 Where Are You in Your Education?
+                </h2>
+
+                <p>
+                    Select your current stage so CareerCompass AI
+                    can personalize your assessment.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="stage-selection">
+
+
+            <label class="stage-card">
+
+                <input type="radio"
+                       name="education_stage"
+                       value="after_10th"
+                       {% if active_stage == "after_10th" %}checked{% endif %}
+                       onchange="window.location.href='{{ url_for("profile", stage="after_10th") }}#after-10th'">
+
+                <div class="stage-icon">
+                    🏫
+                </div>
+
+                <h3>
+                    After 10th
+                </h3>
+
+                <p>
+                    I am studying in or have completed
+                    Class 10.
+                </p>
+
+            </label>
+
+
+
+            <label class="stage-card">
+
+                <input type="radio"
+                       name="education_stage"
+                       value="after_12th"
+                       {% if active_stage == "after_12th" %}checked{% endif %}
+                       onchange="window.location.href='{{ url_for("profile", stage="after_12th") }}#after-12th'">
+
+                <div class="stage-icon">
+                    📚
+                </div>
+
+                <h3>
+
+                    After 12th
+                </h3>
+
+                <p>
+                    I am studying in or have completed
+                    Class 12.
+                </p>
+
+            </label>
+
+
+
+            <label class="stage-card">
+
+                <input type="radio"
+                       name="education_stage"
+                       value="graduation"
+                       {% if active_stage == "graduation" %}checked{% endif %}
+                       onchange="window.location.href='{{ url_for("profile", stage="graduation") }}#graduation'">
+
+                <div class="stage-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Graduation
+                </h3>
+
+                <p>
+                    I am currently pursuing or have completed
+                    graduation.
+                </p>
+
+            </label>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= AFTER 10TH ================= -->
+
+    <section id="after-10th"
+             class="profile-section stage-section"
+             style="display:{{ 'block' if active_stage == 'after_10th' else 'none' }} !important;">
+
+        <div class="section-heading">
+
+            <div class="section-number">
+                02
+            </div>
+
+            <div>
+
+                <h2>
+                    🌱 Your Journey After 10th
+                </h2>
+
+                <p>
+                    Help us understand your interests and
+                    strengths before choosing your next pathway.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- ================= AFTER 10TH PATHWAYS ================= -->
+
+        <div class="profile-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    03
+                </div>
+
+                <div>
+
+                    <h2>
+                        🔎 What would you like to explore after Class 10?
+                    </h2>
+
+                    <p>
+                        Select one or more areas that interest you.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="interest-grid">
+
+                <label class="interest-card">
+
+                    <input type="checkbox"
+                           name="after10_pathway"
+                           value="Science & Mathematics">
+
+                    <span>🔬</span>
+
+                    <strong>
+                        Science & Mathematics
+                    </strong>
+
+                    <small>
+                        Physics, Chemistry, Mathematics and pure sciences
+                    </small>
+
+                </label>
+
+
+                <label class="interest-card">
+
+                    <input type="checkbox"
+                           name="after10_pathway"
+                           value="Commerce & Business">
+
+                    <span>💼</span>
+
+                    <strong>
+                        Commerce & Business
+                    </strong>
+
+                    <small>
+                        Business, accounting, finance and economics
+                    </small>
+
+                </label>
+
+
+                <label class="interest-card">
+
+                    <input type="checkbox"
+                           name="after10_pathway"
+                           value="Humanities & Social Sciences">
+
+                    <span>📚</span>
+
+                    <strong>
+                        Humanities & Social Sciences
+                    </strong>
+
+                    <small>
+                        History, geography, politics, psychology and society
+                    </small>
+
+                </label>
+
+
+                <label class="interest-card">
+
+                    <input type="checkbox"
+                           name="after10_pathway"
+                           value="Computer & Technology">
+
+                    <span>💻</span>
+
+                    <strong>
+                        Computer & Technology
+                    </strong>
+
+                    <small>
+                        Programming, IT, AI and digital technologies
+                    </small>
+
+                </label>
+
+
+                <label class="interest-card">
+
+                    <input type="checkbox"
+                           name="after10_pathway"
+                           value="Engineering & Technical">
+
+                    <span>⚙️</span>
+
+                    <strong>
+                        Engineering & Technical
+                    </strong>
+
+                    <small>
+                        Engineering, electronics, mechanics and technical fields
+                    </small>
+
+                </label>
+
+
+                <label class="interest-card">
+
+                    <input type="checkbox"
+                           name="after10_pathway"
+                           value="Medicine & Healthcare">
+
+                    <span>🩺</span>
+
+                    <strong>
+                        Medicine & Healthcare
+                    </strong>
+
+                    <small>
+                        Medicine, nursing, pharmacy and healthcare
+                    </small>
+
+                </label>
+
+
+                <label class="interest-card">
+
+                    <input type="checkbox"
+                           name="after10_pathway"
+                           value="Defence & Armed Forces">
+
+                    <span>🛡️</span>
+
+                    <strong>
+                        Defence & Armed Forces
+                    </strong>
+
+                    <small>
+                        Army, Navy, Air Force and defence careers
+                    </small>
+
+                </label>
+
+
+                <label class="interest-card">
+
+                    <input type="checkbox"
+                           name="after10_pathway"
+                           value="Police & Uniformed Services">
+
+                    <span>👮</span>
+
+                    <strong>
+                        Police & Uniformed Services
+                    </strong>
+
+                    <small>
+                        Police, paramilitary and uniformed careers
+                    </small>
+
+                </label>
+
+
+                <label class="interest-card">
+
+                    <input type="checkbox"
+                           name="after10_pathway"
+                           value="Arts Design Architecture">
+
+                    <span>🎨</span>
+
+                    <strong>
+                        Arts, Design & Architecture
+                    </strong>
+
+                    <small>
+                        Design, architecture, fine arts and creative careers
+                    </small>
+
+                </label>
+
+
+                <label class="interest-card">
+
+                    <input type="checkbox"
+                           name="after10_pathway"
+                           value="Agriculture & Environment">
+
+                    <span>🌱</span>
+
+                    <strong>
+                        Agriculture & Environment
+                    </strong>
+
+                    <small>
+                        Agriculture, environmental science and sustainability
+                    </small>
+
+                </label>
+
+
+                <label class="interest-card">
+
+                    <input type="checkbox"
+                           name="after10_pathway"
+                           value="Sports & Fitness">
+
+                    <span>🏃</span>
+
+                    <strong>
+                        Sports & Fitness
+                    </strong>
+
+                    <small>
+                        Sports, fitness, physical education and athletics
+                    </small>
+
+                </label>
+
+
+                <label class="interest-card">
+
+                    <input type="checkbox"
+                           name="after10_pathway"
+                           value="Vocational & Skill Based">
+
+                    <span>🛠️</span>
+
+                    <strong>
+                        Vocational & Skill-Based
+                    </strong>
+
+                    <small>
+                        Practical and industry-oriented career pathways
+                    </small>
+
+                </label>
+
+
+                <label class="interest-card">
+
+                    <input type="checkbox"
+                           name="after10_pathway"
+                           value="ITI & Skilled Trades">
+
+                    <span>🔧</span>
+
+                    <strong>
+                        ITI & Skilled Trades
+                    </strong>
+
+                    <small>
+                        Electrical, mechanical, automotive and other trades
+                    </small>
+
+                </label>
+
+
+                <label class="interest-card">
+
+                    <input type="checkbox"
+                           name="after10_pathway"
+                           value="Diploma & Polytechnic">
+
+                    <span>🏗️</span>
+
+                    <strong>
+                        Diploma & Polytechnic
+                    </strong>
+
+                    <small>
+                        Technical diploma and practical engineering pathways
+                    </small>
+
+                </label>
+
+
+                <label class="interest-card">
+
+                    <input type="checkbox"
+                           name="after10_pathway"
+                           value="Aviation">
+
+                    <span>✈️</span>
+
+                    <strong>
+                        Aviation
+                    </strong>
+
+                    <small>
+                        Aircraft, aviation operations and related careers
+                    </small>
+
+                </label>
+
+
+                <label class="interest-card">
+
+                    <input type="checkbox"
+                           name="after10_pathway"
+                           value="Not Sure">
+
+                    <span>🤔</span>
+
+                    <strong>
+                        Not Sure — Help Me Decide
+                    </strong>
+
+                    <small>
+                        Let CareerCompass AI suggest suitable pathways
+                    </small>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= EXISTING AFTER 10TH PROFILE ================= -->
+
+
+
+
+
+
+
+        <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                <label>
+                    📚 Which subjects did you study?
+                </label>
+
+                <input type="number"
+                       name="tenth_percentage"
+                       min="0"
+                       max="100"
+                       placeholder="Example: 92">
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    10th Board
+                </label>
+
+                <select name="tenth_board">
+
+                    <option value="">
+                        Select Board
+                    </option>
+
+                    <option>
+                        CBSE
+                    </option>
+
+                    <option>
+                        ICSE
+                    </option>
+
+                    <option>
+                        State Board
+                    </option>
+
+                    <option>
+                        IB
+                    </option>
+
+                    <option>
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="form-group full-width">
+
+                <label>
+                    ⭐ Subjects You Enjoy
+                </label>
+
+                <input type="text"
+                       name="favorite_subjects"
+                       placeholder="Example: Mathematics, Science, Computer Science">
+
+                <small>
+                    Separate multiple subjects with commas.
+                </small>
+
+            </div>
+
+
+
+            <div class="form-group full-width">
+
+                <label>
+                    💡 Areas That Interest You
+                </label>
+
+                <input type="text"
+                       name="interests_10th"
+                       placeholder="Example: Coding, Medicine, Business, Drawing, Sports">
+
+                <small>
+                    Tell us what you naturally enjoy learning or doing.
+                </small>
+
+            </div>
+
+
+
+            <div class="form-group full-width">
+
+                <label>
+                    🧠 What Do You Enjoy Doing?
+                </label>
+
+                <select name="activity_interest">
+
+                    <option value="">
+                        Select an activity
+                    </option>
+
+                    <option>
+                        Solving mathematical problems
+                    </option>
+
+                    <option>
+                        Using computers and technology
+                    </option>
+
+                    <option>
+                        Building or repairing things
+                    </option>
+
+                    <option>
+                        Helping and caring for people
+                    </option>
+
+                    <option>
+                        Drawing and designing
+                    </option>
+
+                    <option>
+                        Reading and writing
+                    </option>
+
+                    <option>
+                        Business and managing money
+                    </option>
+
+                    <option>
+                        Understanding society and people
+                    </option>
+
+                    <option>
+                        Nature and environment
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="form-group full-width">
+
+                <label>
+                    🎯 What Would You Like to Explore?
+                </label>
+
+                <input type="text"
+                       name="career_interests_10th"
+                       placeholder="Example: Engineering, AI, Medicine, Law, Design">
+
+            </div>
+
+
+        </div>
+
+    
+    <div class="stage-save-card" data-save-stage="after_10th">
+
+        <div class="stage-save-icon">
+            💾
+        </div>
+
+        <div class="stage-save-content">
+
+            <h3>
+                Save Your After 10th Profile
+            </h3>
+
+            <p>
+                Save your interests, subjects and preferred career areas to generate personalized pathways and career recommendations.
+            </p>
+
+            <div
+                class="stage-edit-status"
+                data-stage-status="after_10th">
+            </div>
+
+            <button
+                type="button"
+                class="profile-button stage-save-button"
+                onclick="saveProfile()">
+                Save After 10th Profile
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <!-- ================= AFTER 12TH ================= -->
+
+    
+
+<div id="after10-results"
+     class="stage-results"
+     data-stage="after_10th"
+     style="display:none;">
+
+    <div class="stage-results-banner">
+        <strong>📊 Your Saved After 10th Recommendations</strong>
+        <span id="after10-results-message">
+            These recommendations are generated from your saved After 10th profile.
+        </span>
+    </div>
+<!-- ======================================
+             AFTER 10TH CAREER RECOMMENDATIONS
+             ====================================== -->
+
+{% if profile and profile['education_stage'] == 'after_10th' and after10th_recommendations %}
+
+<div class="recommendation-panel">
+
+    <div class="section-heading">
+
+        <div class="section-number">
+            🎯
+        </div>
+
+        <div>
+
+            <h2>
+                After 10th Career Recommendations
+            </h2>
+
+            <p>
+                Personalized pathways based on your selected interests,
+                subjects and activities.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="recommendation-grid">
+
+        {% for recommendation in after10th_recommendations %}
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-card-header">
+
+                <h3>
+                    {{ recommendation.icon }}
+                    {{ recommendation.pathway }}
+                </h3>
+
+                {% if recommendation.score is defined %}
+                <span class="recommendation-score">
+                    {{ recommendation.score }}
+                </span>
+                {% endif %}
+
+            </div>
+
+
+            <p class="recommendation-domain">
+                {{ recommendation.description }}
+            </p>
+
+
+            {% if recommendation.why_recommended %}
+            <div class="recommendation-detail">
+                <strong>
+                    💡 Why this pathway was recommended
+                </strong>
+                <p>
+                    {{ recommendation.why_recommended }}
+                </p>
+            </div>
+            {% endif %}
+
+
+            {% if recommendation.careers %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    💼 Possible Career Areas
+                </strong>
+
+                <ul>
+
+                    {% for career in recommendation.careers %}
+
+                    <li>
+                        {{ career }}
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+            {% endif %}
+
+
+            {% if recommendation.next_step %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    📚 Suggested Next Step
+                </strong>
+
+                <p>
+                    {{ recommendation.next_step }}
+                </p>
+
+            </div>
+
+            {% endif %}
+
+
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endif %}
+
+
+
+
+
+<!-- ======================================
+     AFTER 10TH INDIVIDUAL CAREER RECOMMENDATIONS
+     ====================================== -->
+
+{% if profile and profile['education_stage'] == 'after_10th' and after10th_career_recommendations %}
+
+<div class="recommendation-panel">
+
+    <div class="section-heading">
+
+        <div class="section-number">
+            🎯
+        </div>
+
+        <div>
+
+            <h2>
+                Individual Career Recommendations
+            </h2>
+
+            <p>
+                CareerCompass AI has matched specific careers to your
+                interests, subjects, activities and recommended pathways.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="recommendation-grid">
+
+        {% for career in after10th_career_recommendations %}
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-card-header">
+
+                <h3>
+                    🎯 {{ career.career }}
+                </h3>
+
+            </div>
+
+            <p class="recommendation-domain">
+                {{ career.pathway }}
+            </p>
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    📊 Match Score
+                </strong>
+
+                <p>
+                    {{ career.score }}
+                </p>
+
+            </div>
+
+
+            {% if career.score_breakdown %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    🔎 Match Breakdown
+                </strong>
+
+                <ul>
+
+                    {% for category, points in career.score_breakdown.items() %}
+
+                    <li>
+                        {{ category }}: {{ points }} points
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+            {% endif %}
+
+            {% if career.why_match %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    💡 Why This Career Matches You
+                </strong>
+
+                <p>
+                    {{ career.why_match }}
+                </p>
+
+            </div>
+
+            {% endif %}
+
+            {% if career.subjects %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    📚 Relevant Subjects
+                </strong>
+
+                <p>
+                    {{ career.subjects | join(", ") }}
+                </p>
+
+            </div>
+
+            {% endif %}
+
+            {% if career.activities %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    🧠 Related Activities
+                </strong>
+
+                <p>
+                    {{ career.activities | join(", ") }}
+                </p>
+
+            </div>
+
+            {% endif %}
+
+
+            {% if career.education %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    🎓 Education Path
+                </strong>
+
+                <p>
+                    {{ career.education }}
+                </p>
+
+            </div>
+
+            {% endif %}
+
+
+            {% if career.skills_to_build %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    🛠️ Skills to Build
+                </strong>
+
+                <ul>
+
+                    {% for skill in career.skills_to_build %}
+
+                    <li>
+                        {{ skill }}
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+            {% endif %}
+
+
+            {% if career.beginner_action %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    🚀 Beginner Action
+                </strong>
+
+                <p>
+                    {{ career.beginner_action }}
+                </p>
+
+            </div>
+
+            {% endif %}
+
+
+            {% if career.opportunities %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    💼 Opportunities to Explore
+                </strong>
+
+                <ul>
+
+                    {% for opportunity in career.opportunities %}
+
+                    <li>
+                        {{ opportunity }}
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+            {% endif %}
+
+
+
+            <details class="career-details-accordion">
+    <summary>🔍 View Career Details</summary>
+
+    <div class="career-details-expanded">
+
+        <div class="career-expanded-item">
+            <strong>📊 Match Score</strong>
+            <span>{{ career.score }}</span>
+        </div>
+
+        {% if career.why_match %}
+        <div class="career-expanded-item">
+            <strong>💡 Why This Career Matches You</strong>
+            <p>{{ career.why_match }}</p>
+        </div>
+        {% endif %}
+
+        {% if career.subjects %}
+        <div class="career-expanded-item">
+            <strong>📚 Relevant Subjects</strong>
+            <p>{{ career.subjects | join(", ") }}</p>
+        </div>
+        {% endif %}
+
+        {% if career.activities %}
+        <div class="career-expanded-item">
+            <strong>🧠 Related Activities</strong>
+            <p>{{ career.activities | join(", ") }}</p>
+        </div>
+        {% endif %}
+
+        {% if career.education %}
+        <div class="career-expanded-item">
+            <strong>🎓 Education Path</strong>
+            <p>{{ career.education }}</p>
+        </div>
+        {% endif %}
+
+        {% if career.skills_to_build %}
+        <div class="career-expanded-item">
+            <strong>🛠️ Skills to Build</strong>
+            <ul>
+                {% for skill in career.skills_to_build %}
+                <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        {% if career.beginner_action %}
+        <div class="career-expanded-item">
+            <strong>🚀 Beginner Action</strong>
+            <p>{{ career.beginner_action }}</p>
+        </div>
+        {% endif %}
+
+        {% if career.opportunities %}
+        <div class="career-expanded-item">
+            <strong>💼 Opportunities to Explore</strong>
+            <ul>
+                {% for opportunity in career.opportunities %}
+                <li>{{ opportunity }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+    </div>
+</details>
+
+        </div>
+
+
+        {% for career in after10th_career_recommendations %}
+
+                    <div
+                id="after10CareerModal{{ loop.index }}"
+                class="career-modal"
+                aria-hidden="true">
+
+                <div
+                    class="career-modal-overlay"
+                    onclick="closeCareerModal('after10CareerModal{{ loop.index }}')">
+                </div>
+
+                <div
+                    class="career-modal-content"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="after10CareerModalTitle{{ loop.index }}">
+
+                    <button
+                        type="button"
+                        class="career-modal-close"
+                        onclick="closeCareerModal('after10CareerModal{{ loop.index }}')"
+                        aria-label="Close career details">
+                        ×
+                    </button>
+
+                    <div class="career-modal-heading">
+                        <div class="career-modal-icon">🎯</div>
+
+                        <div>
+                            <h2 id="after10CareerModalTitle{{ loop.index }}">
+                                {{ career.career }}
+                            </h2>
+
+                            <p>
+                                {{ career.pathway }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="career-modal-section">
+                        <h3>📊 Match Score</h3>
+                        <div class="career-modal-score">
+                            {{ career.score }}
+                        </div>
+                    </div>
+
+                    {% if career.why_match %}
+                    <div class="career-modal-section">
+                        <h3>💡 Why This Career Matches You</h3>
+                        <p>{{ career.why_match }}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if career.subjects %}
+                    <div class="career-modal-section">
+                        <h3>📚 Relevant Subjects</h3>
+                        <p>{{ career.subjects|join(", ") }}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if career.activities %}
+                    <div class="career-modal-section">
+                        <h3>🧠 Related Activities</h3>
+                        <p>{{ career.activities|join(", ") }}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if career.education %}
+                    <div class="career-modal-section">
+                        <h3>🎓 Education Path</h3>
+                        <p>{{ career.education }}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if career.skills_to_build %}
+                    <div class="career-modal-section">
+                        <h3>🛠️ Skills to Build</h3>
+                        <ul>
+                            {% for skill in career.skills_to_build %}
+                            <li>{{ skill }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+
+                    {% if career.beginner_action %}
+                    <div class="career-modal-section">
+                        <h3>🚀 Beginner Action</h3>
+                        <p>{{ career.beginner_action }}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if career.opportunities %}
+                    <div class="career-modal-section">
+                        <h3>💼 Opportunities to Explore</h3>
+                        <ul>
+                            {% for opportunity in career.opportunities %}
+                            <li>{{ opportunity }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endif %}
+
+
+<style>
+.career-details-button-wrap {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.career-details-btn {
+    border: none;
+    border-radius: 12px;
+    padding: 11px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #f1ecff;
+    color: #5b4bb7;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.career-details-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(91, 75, 183, 0.18);
+}
+
+.career-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+}
+
+.career-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.career-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 20, 40, 0.58);
+    backdrop-filter: blur(4px);
+}
+
+.career-modal-content {
+    position: relative;
+    z-index: 2;
+    width: min(760px, 92vw);
+    max-height: 88vh;
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+}
+
+.career-modal-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: #f3f3f7;
+    color: #444;
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.career-modal-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-right: 45px;
+}
+
+.career-modal-icon {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: #eee9ff;
+    font-size: 27px;
+    flex-shrink: 0;
+}
+
+.career-modal-heading h2 {
+    margin: 0;
+}
+
+.career-modal-heading p {
+    margin: 5px 0 0;
+    opacity: 0.75;
+}
+
+.career-modal-section {
+    margin-top: 18px;
+    padding: 18px;
+    border-radius: 15px;
+    background: #f8f9fc;
+}
+
+.career-modal-section h3 {
+    margin-top: 0;
+    margin-bottom: 9px;
+}
+
+.career-modal-section p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.career-modal-section ul {
+    margin-bottom: 0;
+}
+
+.career-modal-score {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+body.career-modal-open {
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .career-modal-content {
+        width: 94vw;
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    .career-modal-heading {
+        align-items: flex-start;
+    }
+}
+</style>
+
+<script>
+function openCareerModal(modalId) {
+
+    /*
+     * Close every other popup first.
+     */
+    document.querySelectorAll(".career-modal").forEach(function(modal) {
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+    });
+
+    const modal = document.getElementById(modalId);
+
+    if (!modal) {
+        return;
+    }
+
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("career-modal-open");
+}
+
+function closeCareerModal(modalId) {
+    const modal = document.getElementById(modalId);
+
+    if (!modal) {
+        return;
+    }
+
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("career-modal-open");
+}
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        document.querySelectorAll(".career-modal.active").forEach(function(modal) {
+            modal.classList.remove("active");
+            modal.setAttribute("aria-hidden", "true");
+        });
+
+        document.body.classList.remove("career-modal-open");
+    }
+});
+</script>
+
+
+<!-- ======================================
+     AFTER 10TH PERSONALIZED NEXT STEPS
+     ====================================== -->
+
+{% if profile and profile['education_stage'] == 'after_10th' and after10th_next_steps %}
+
+<div class="recommendation-panel">
+
+    <div class="section-heading">
+
+        <div class="section-number">
+            🚀
+        </div>
+
+        <div>
+
+            <h2>
+                Your Personalized Next Steps
+            </h2>
+
+            <p>
+                Follow these steps to explore your options after Class 10.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="recommendation-grid">
+
+        {% for step in after10th_next_steps %}
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-card-header">
+
+                <h3>
+                    {{ step.icon }}
+                    Step {{ step.number }}: {{ step.title }}
+                </h3>
+
+            </div>
+
+
+            <p class="recommendation-domain">
+                {{ step.focus }}
+            </p>
+
+
+            {% if step.action %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    📚 What you can do
+                </strong>
+
+                <p>
+                    {{ step.action }}
+                </p>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endif %}
+
+
+<!-- ======================================
+     AFTER 10TH STREAM / PATHWAY GUIDANCE
+     ====================================== -->
+
+{% if profile and profile['education_stage'] == 'after_10th' and after10th_stream_guidance %}
+
+<div class="recommendation-panel">
+
+    <div class="section-heading">
+
+        <div class="section-number">
+            🎓
+        </div>
+
+        <div>
+
+            <h2>
+                Your Stream & Pathway Guidance
+            </h2>
+
+            <p>
+                Explore suitable study routes for Classes 11 and 12 based on your recommended pathways.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="recommendation-grid">
+
+        {% for guidance in after10th_stream_guidance %}
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-card-header">
+
+                <h3>
+                    {{ guidance.icon }}
+                    {{ guidance.pathway }}
+                </h3>
+
+            </div>
+
+
+            <p class="recommendation-domain">
+                {{ guidance.description }}
+            </p>
+
+
+            {% if guidance.streams %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    📚 Suitable Study Routes
+                </strong>
+
+                <ul>
+
+                    {% for stream in guidance.streams %}
+
+                    <li>
+                        {{ stream }}
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+            {% endif %}
+
+
+            {% if guidance.next_step %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    🎯 What to Do Next
+                </strong>
+
+                <p>
+                    {{ guidance.next_step }}
+                </p>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endif %}
+
+
+<!-- ======================================
+     AFTER 10TH COMPETITIVE EXAM GUIDANCE
+     ====================================== -->
+
+{% if profile and profile['education_stage'] == 'after_10th' and after10th_exams %}
+
+<div class="recommendation-panel">
+
+    <div class="section-heading">
+
+        <div class="section-number">
+            🏆
+        </div>
+
+        <div>
+
+            <h2>
+                Competitive Exam & Opportunity Guidance
+            </h2>
+
+            <p>
+                Explore exam and competition categories related to your recommended pathways.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="recommendation-grid">
+
+        {% for exam in after10th_exams %}
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-card-header">
+
+                <h3>
+                    {{ exam.icon }}
+                    {{ exam.exam }}
+                </h3>
+
+            </div>
+
+
+            <p class="recommendation-domain">
+                <strong>
+                    Related Pathway:
+                </strong>
+                {{ exam.pathway }}
+            </p>
+
+
+            {% if exam.focus %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    📖 Main Focus
+                </strong>
+
+                <p>
+                    {{ exam.focus }}
+                </p>
+
+            </div>
+
+            {% endif %}
+
+
+            {% if exam.purpose %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    🎯 Why Explore This
+                </strong>
+
+                <p>
+                    {{ exam.purpose }}
+                </p>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endif %}
+
+
+<!-- ======================================
+     AFTER 10TH CAREER ROADMAP
+     ====================================== -->
+
+{% if profile and profile['education_stage'] == 'after_10th' and after10th_career_roadmap %}
+
+<div class="recommendation-panel">
+
+    <div class="section-heading">
+
+        <div class="section-number">
+            🗺️
+        </div>
+
+        <div>
+
+            <h2>
+                Your After 10th Career Roadmap
+            </h2>
+
+            <p>
+                Follow these steps to explore your recommended pathways
+                and plan your next stage after Class 10.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="recommendation-grid">
+
+        {% for step in after10th_career_roadmap %}
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-card-header">
+
+                <h3>
+                    {{ step.icon }}
+                    Step {{ step.step }}: {{ step.title }}
+                </h3>
+
+            </div>
+
+
+            {% if step.description %}
+
+            <p class="recommendation-domain">
+                {{ step.description }}
+            </p>
+
+            {% endif %}
+
+
+            {% if step.careers %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    💼 Career Areas to Explore
+                </strong>
+
+                <ul>
+
+                    {% for career in step.careers %}
+
+                    <li>
+                        {{ career }}
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+            {% endif %}
+
+
+            {% if step.action %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    🎯 Recommended Action
+                </strong>
+
+                <p>
+                    {{ step.action }}
+                </p>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endif %}
+
+
+<!-- ======================================
+     AFTER 10TH SKILL DEVELOPMENT GUIDANCE
+     ====================================== -->
+
+{% if profile and profile['education_stage'] == 'after_10th' and after10th_skill_guidance %}
+
+<div class="recommendation-panel">
+
+    <div class="section-heading">
+
+        <div class="section-number">
+            🧠
+        </div>
+
+        <div>
+
+            <h2>
+                After 10th Skill Development Guidance
+            </h2>
+
+            <p>
+                Build useful skills based on your recommended career pathways.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="recommendation-grid">
+
+        {% for guidance in after10th_skill_guidance %}
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-card-header">
+
+                <h3>
+                    {{ guidance.icon }}
+                    {{ guidance.pathway }}
+                </h3>
+
+            </div>
+
+
+            {% if guidance.technical_skills %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    💻 Technical Skills to Develop
+                </strong>
+
+                <ul>
+
+                    {% for skill in guidance.technical_skills %}
+
+                    <li>
+                        {{ skill }}
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+            {% endif %}
+
+
+            {% if guidance.soft_skills %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    🤝 Soft Skills to Develop
+                </strong>
+
+                <ul>
+
+                    {% for skill in guidance.soft_skills %}
+
+                    <li>
+                        {{ skill }}
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+            {% endif %}
+
+
+            {% if guidance.learning_areas %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    📚 Suggested Learning Areas
+                </strong>
+
+                <ul>
+
+                    {% for area in guidance.learning_areas %}
+
+                    <li>
+                        {{ area }}
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+            {% endif %}
+
+
+            {% if guidance.activity %}
+
+            <div class="recommendation-detail">
+
+                <strong>
+                    🎯 Beginner Activity
+                </strong>
+
+                <p>
+                    {{ guidance.activity }}
+                </p>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endif %}
+
+
+</div>
+
+
+
+<section id="after-12th"
+             class="profile-section stage-section"
+             style="display:{{ 'block' if active_stage == 'after_12th' else 'none' }} !important;">
+
+
+
+        <div class="form-grid">
+
+
+            <div class="form-group">
+
+                <label>
+                    📊 What was your Class 12 percentage?
+                </label>
+
+        <input type="number"
+       name="twelfth_percentage"
+       min="0"
+       max="100"
+       placeholder="Example: 88"
+       value="{{ profile['twelfth_percentage'] if profile else '' }}">
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    🏫 Which board did you study under?
+                </label>
+
+                <select name="twelfth_board">
+
+    <option value="">
+        Select Board
+    </option>
+
+    <option value="CBSE"
+            {% if profile and profile['twelfth_board'] == 'CBSE' %}selected{% endif %}>
+        CBSE
+    </option>
+
+    <option value="ICSE"
+            {% if profile and profile['twelfth_board'] == 'ICSE' %}selected{% endif %}>
+        ICSE
+    </option>
+
+    <option value="State Board"
+            {% if profile and profile['twelfth_board'] == 'State Board' %}selected{% endif %}>
+        State Board
+    </option>
+
+    <option value="IB"
+            {% if profile and profile['twelfth_board'] == 'IB' %}selected{% endif %}>
+        IB
+    </option>
+
+    <option value="Other"
+            {% if profile and profile['twelfth_board'] == 'Other' %}selected{% endif %}>
+        Other
+    </option>
+
+</select>
+
+                
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    📚 Your Stream
+                </label>
+
+              <select name="twelfth_stream">
+
+    <option value="">
+        Select Stream
+    </option>
+
+    <option value="Science"
+            {% if profile and profile['twelfth_stream'] == 'Science' %}selected{% endif %}>
+        Science
+    </option>
+
+    <option value="Commerce"
+            {% if profile and profile['twelfth_stream'] == 'Commerce' %}selected{% endif %}>
+        Commerce
+    </option>
+
+    <option value="Humanities / Arts"
+            {% if profile and profile['twelfth_stream'] == 'Humanities / Arts' %}selected{% endif %}>
+        Humanities / Arts
+    </option>
+
+    <option value="Vocational"
+            {% if profile and profile['twelfth_stream'] == 'Vocational' %}selected{% endif %}>
+        Vocational
+    </option>
+
+</select>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+
+    <label>
+        📚 Which subjects did you study?
+    </label>
+
+   <input type="text"
+       name="subjects_studied"
+       placeholder="Example: Mathematics, Physics, Chemistry, Computer Science"
+       value="{{ profile['subjects_studied'] if profile else '' }}">
+
+    <small>
+        Enter the main subjects you studied in Class 12.
+    </small>
+
+</div>
+
+                <label>
+    ⭐ Which subjects are you strongest in?
+</label>
+
+<select name="strongest_subjects" multiple size="6">
+
+ 
+
+        <option value="Mathematics"
+            {% if profile and 'Mathematics' in profile['strongest_subjects'].split(', ') %}selected{% endif %}>
+        📐 Mathematics
+    </option>
+
+    <option value="Physics"
+            {% if profile and 'Physics' in profile['strongest_subjects'].split(', ') %}selected{% endif %}>
+        ⚡ Physics
+    </option>
+
+    <option value="Chemistry"
+            {% if profile and 'Chemistry' in profile['strongest_subjects'].split(', ') %}selected{% endif %}>
+        🧪 Chemistry
+    </option>
+
+    <option value="Biology"
+            {% if profile and 'Biology' in profile['strongest_subjects'].split(', ') %}selected{% endif %}>
+        🧬 Biology
+    </option>
+
+    <option value="Computer Science"
+            {% if profile and 'Computer Science' in profile['strongest_subjects'].split(', ') %}selected{% endif %}>
+        💻 Computer Science
+    </option>
+
+    <option value="Accountancy"
+            {% if profile and 'Accountancy' in profile['strongest_subjects'].split(', ') %}selected{% endif %}>
+        📊 Accountancy
+    </option>
+
+    <option value="Economics"
+            {% if profile and 'Economics' in profile['strongest_subjects'].split(', ') %}selected{% endif %}>
+        💰 Economics
+    </option>
+
+    <option value="Business Studies"
+            {% if profile and 'Business Studies' in profile['strongest_subjects'].split(', ') %}selected{% endif %}>
+        📈 Business Studies
+    </option>
+
+    <option value="History"
+            {% if profile and 'History' in profile['strongest_subjects'].split(', ') %}selected{% endif %}>
+        📜 History
+    </option>
+
+    <option value="Political Science"
+            {% if profile and 'Political Science' in profile['strongest_subjects'].split(', ') %}selected{% endif %}>
+        🏛️ Political Science
+    </option>
+
+    <option value="Geography"
+            {% if profile and 'Geography' in profile['strongest_subjects'].split(', ') %}selected{% endif %}>
+        🌍 Geography
+    </option>
+
+    <option value="Psychology"
+            {% if profile and 'Psychology' in profile['strongest_subjects'].split(', ') %}selected{% endif %}>
+        🧠 Psychology
+    </option>
+
+    <option value="Sociology"
+            {% if profile and 'Sociology' in profile['strongest_subjects'].split(', ') %}selected{% endif %}>
+        👥 Sociology
+    </option>
+
+    <option value="Other"
+            {% if profile and 'Other' in profile['strongest_subjects'].split(', ') %}selected{% endif %}>
+        📚 Other
+    </option>
+     
+
+</select>
+
+<small>
+    Select one or more  subjects  you are strongest in.
+</small>
+
+
+
+             <div class="form-group full-width">
+
+                <label>
+                    💡 Which career area interests you most?
+                </label>
+
+              <select name="interests_12th">
+
+    <option value="">
+        Select a career domain
+    </option>
+
+    <option value="Technology & AI"
+            {% if profile and profile['interests_12th'] == 'Technology & AI' %}selected{% endif %}>
+        💻 Technology & AI
+    </option>
+
+    <option value="Engineering"
+            {% if profile and profile['interests_12th'] == 'Engineering' %}selected{% endif %}>
+        ⚙️ Engineering
+    </option>
+
+    <option value="Medicine & Healthcare"
+            {% if profile and profile['interests_12th'] == 'Medicine & Healthcare' %}selected{% endif %}>
+        🩺 Medicine & Healthcare
+    </option>
+
+    <option value="Business & Finance"
+            {% if profile and profile['interests_12th'] == 'Business & Finance' %}selected{% endif %}>
+        💰 Business & Finance
+    </option>
+
+    <option value="Law"
+            {% if profile and profile['interests_12th'] == 'Law' %}selected{% endif %}>
+        ⚖️ Law
+    </option>
+
+    <option value="Government & Public Service"
+            {% if profile and profile['interests_12th'] == 'Government & Public Service' %}selected{% endif %}>
+        🏛️ Government & Public Service
+    </option>
+
+    <option value="Defence"
+            {% if profile and profile['interests_12th'] == 'Defence' %}selected{% endif %}>
+        🪖 Defence
+    </option>
+
+    <option value="Research & Science"
+            {% if profile and profile['interests_12th'] == 'Research & Science' %}selected{% endif %}>
+        🔬 Research & Science
+    </option>
+
+    <option value="Design & Architecture"
+            {% if profile and profile['interests_12th'] == 'Design & Architecture' %}selected{% endif %}>
+        🏗️ Design & Architecture
+    </option>
+
+    <option value="Media & Communication"
+            {% if profile and profile['interests_12th'] == 'Media & Communication' %}selected{% endif %}>
+        🎥 Media & Communication
+    </option>
+
+    <option value="Education"
+            {% if profile and profile['interests_12th'] == 'Education' %}selected{% endif %}>
+        👩‍🏫 Education
+    </option>
+
+    <option value="Agriculture & Environment"
+            {% if profile and profile['interests_12th'] == 'Agriculture & Environment' %}selected{% endif %}>
+        🌱 Agriculture & Environment
+    </option>
+
+    <option value="Psychology & Social Sciences"
+            {% if profile and profile['interests_12th'] == 'Psychology & Social Sciences' %}selected{% endif %}>
+        🧠 Psychology & Social Sciences
+    </option>
+
+    <option value="Not Sure — Help Me Decide"
+            {% if profile and profile['interests_12th'] == 'Not Sure — Help Me Decide' %}selected{% endif %}>
+        🤔 Not Sure — Help Me Decide
+    </option>
+
+</select>
+        
+             
+
+                  <small>
+                      Select the career domain that you are interested in most.
+                  </small>
+
+              </div>
+
+   
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    🎯 Which career direction would you like to explore?
+                </label>
+
+                <select name="career_direction">
+
+    <option value="">
+    Select an option
+</option>
+
+<option value="Technology"
+        {% if profile and profile['career_direction'] == 'Technology' %}selected{% endif %}>
+    Technology
+</option>
+
+<option value="Medicine & Healthcare"
+        {% if profile and profile['career_direction'] == 'Medicine & Healthcare' %}selected{% endif %}>
+    Medicine & Healthcare
+</option>
+
+<option value="Business & Finance"
+        {% if profile and profile['career_direction'] == 'Business & Finance' %}selected{% endif %}>
+    Business & Finance
+</option>
+
+<option value="Law"
+        {% if profile and profile['career_direction'] == 'Law' %}selected{% endif %}>
+    Law
+</option>
+
+<option value="Government & Public Service"
+        {% if profile and profile['career_direction'] == 'Government & Public Service' %}selected{% endif %}>
+    Government & Public Service
+</option>
+
+<option value="Research"
+        {% if profile and profile['career_direction'] == 'Research' %}selected{% endif %}>
+    Research
+</option>
+
+<option value="Design & Media"
+        {% if profile and profile['career_direction'] == 'Design & Media' %}selected{% endif %}>
+    Design & Media
+</option>
+
+<option value="Not Sure Yet"
+        {% if profile and profile['career_direction'] == 'Not Sure Yet' %}selected{% endif %}>
+    Not Sure Yet
+</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group full-width">
+
+                <label>
+                    🛠️ Which skills do you already have?
+                </label>
+
+                <small class="field-help">
+                    Select the skills you feel you are comfortable with.
+                </small>
+
+                <select name="skills" multiple size="6">
+                    <option value="Programming">💻 Programming</option>
+                    <option value="Problem Solving">🧩 Problem Solving</option>
+                    <option value="Mathematics">🔢 Mathematics</option>
+                    <option value="Data Analysis">📊 Data Analysis</option>
+                    <option value="Research">🔬 Research</option>
+                    <option value="Communication">🗣️ Communication</option>
+                    <option value="Empathy">💙 Empathy</option>
+                    <option value="Observation">👀 Observation</option>
+                    <option value="Human Behaviour">🧠 Human Behaviour</option>
+                    <option value="Counseling">🤝 Counseling</option>
+                    <option value="Active Listening">👂 Active Listening</option>
+                    <option value="Social Science">🌍 Social Science</option>
+                    <option value="Analytical Thinking">📈 Analytical Thinking</option>
+                    <option value="Critical Thinking">💡 Critical Thinking</option>
+                    <option value="Writing">✍️ Writing</option>
+                </select>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    📝 Are you interested in competitive exams?
+                </label>
+
+                <select name="exam_interest">
+
+                  <option value="">
+    Select
+</option>
+
+<option value="Yes"
+        {% if profile and profile['twelfth_exam_interest'] == 'Yes' %}selected{% endif %}>
+    Yes
+</option>
+
+<option value="No"
+        {% if profile and profile['twelfth_exam_interest'] == 'No' %}selected{% endif %}>
+    No
+</option>
+
+<option value="Not Sure"
+        {% if profile and profile['twelfth_exam_interest'] == 'Not Sure' %}selected{% endif %}>
+    Not Sure
+</option>
+
+                </select>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="section-heading">
+
+            <div class="section-number">
+                02
+            </div>
+
+            <div>
+
+                <h2>
+                    🚀 Your Journey After 12th
+                </h2>
+
+                <p>
+                    📚 First, tell us about your Class 12 background,
+                    subjects, interests and the direction you want to explore.
+                </p>
+
+            </div>
+
+        </div>
+
+    
+
+
+<div class="section-heading">
+
+            <div class="section-number">
+                03
+            </div>
+
+            <div>
+
+                <h2>
+                    🧭 Career Interest Assessment
+                </h2>
+
+                <p>
+                    💡 Answer a few simple questions about the problems
+                    you enjoy, how you prefer to work and what motivates you.
+                    Your answers help CareerCompass AI personalize your guidance.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="assessment-info-box">
+            <strong>💡 Why are we asking these questions?</strong>
+            <p>
+                Your answers help CareerCompass AI understand your interests,
+                preferred working style and personal strengths so it can
+                provide more personalized career guidance.
+            </p>
+        </div>
+
+
+        <div class="form-grid">
+
+
+            <div class="form-group full-width">
+
+                <label>
+                    💭 What type of problems do you enjoy solving?
+                </label>
+
+                <small class="field-help">
+                    Choose the type of challenges you naturally enjoy.
+                </small>
+
+                <select name="problem_type">
+
+                    <option value="">
+                        Select
+                    </option>
+
+                    <option>
+                        🔢 Solving numerical and logical puzzles
+                    </option>
+
+                    <option>
+                        💻 Building apps, websites or solving coding challenges
+                    </option>
+
+                    <option>
+                        🔬 Understanding science through experiments and discovery
+                    </option>
+
+                    <option>
+                        🧑‍⚕️ Understanding health, the human body and helping people
+                    </option>
+
+                    <option>
+                        🎨 Creating designs, visuals and creative ideas
+                    </option>
+
+                    <option>
+                        💰 Solving business, money and financial problems
+                    </option>
+
+                    <option>
+                        ⚖️ Understanding rules, justice and legal situations
+                    </option>
+
+                    <option>
+                        🏛️ Solving public and community problems
+                    </option>
+
+                    <option>
+                        🪖 Challenges involving discipline, leadership and national service
+                    </option>
+
+                    <option>
+                        🌱 Solving environmental, agricultural and sustainability problems
+                    </option>
+
+                    <option>
+                        🧠 Understanding people's behaviour and emotions
+                    </option>
+
+                    <option>
+                        📚 Explaining concepts and helping others learn
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="form-group full-width">
+
+                <label>
+                    🤝 How do you prefer to work?
+                </label>
+
+                <small class="field-help">
+                    Tell us about the work environment where you feel most comfortable.
+                </small>
+
+                <select name="work_style">
+
+                    <option value="">
+                        Select
+                    </option>
+
+                    <option>
+                        💻 I like working mainly with computers and technology
+                    </option>
+
+                    <option>
+                        👥 I enjoy interacting with and helping people
+                    </option>
+
+                    <option>
+                        📊 I prefer working with numbers, data and analysis
+                    </option>
+
+                    <option>
+                        🧪 I enjoy experiments, laboratories and research
+                    </option>
+
+                    <option>
+                        🎨 I prefer creative and design-oriented work
+                    </option>
+
+                    <option>
+                        🏢 I like organizing, managing and leading teams
+                    </option>
+
+                    <option>
+                        🌳 I enjoy working outdoors and in real-world environments
+                    </option>
+
+                    <option>
+                        🛠️ I prefer practical, hands-on work
+                    </option>
+
+                    <option>
+                        🗣️ I enjoy speaking, writing and communicating ideas
+                    </option>
+
+                    <option>
+                        🧭 I like structured work with clear rules and responsibilities
+                    </option>
+
+                    <option>
+                        🚀 I prefer independent work where I can explore my own ideas
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="form-group full-width">
+
+                <label>
+                    📝 Tell us about yourself
+                </label>
+
+                <small class="field-help">
+                    Share your strengths, hobbies, achievements or career goals.
+                </small>
+
+                <textarea name="about"
+                          rows="5"
+                          placeholder="Tell CareerCompass AI about your strengths, hobbies, achievements or goals..."></textarea>
+
+            </div>
+
+
+        </div>
+
+    <div class="stage-save-card" data-save-stage="after_12th">
+
+        <div class="stage-save-icon">
+            💾
+        </div>
+
+        <div class="stage-save-content">
+
+            <h3>
+                Save Your After 12th Profile
+            </h3>
+
+            <p>
+                Save your Class 12 background, career interests, skills and assessment answers to generate personalized career guidance.
+            </p>
+
+            <div
+                class="stage-edit-status"
+                data-stage-status="after_12th">
+            </div>
+
+            <button
+                type="button"
+                class="profile-button stage-save-button"
+                onclick="saveProfile()">
+                Save After 12th Profile
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- ================= GRADUATION ================= -->
+
+<section id="graduation"
+             class="profile-section stage-section"
+             style="display:{{ 'block' if active_stage == 'graduation' else 'none' }} !important;">
+
+        <div class="section-heading">
+
+            <div class="section-number">
+                02
+            </div>
+
+            <div>
+
+                <h2>
+                    💼 Your Graduation & Career Profile
+                </h2>
+
+                <p>
+                    Tell us about your education, skills and
+                    professional interests.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-grid">
+
+
+            <div class="form-group">
+
+                <label>
+                    🎓 Degree
+                </label>
+
+                <input type="text"
+                       name="graduation_degree"
+                       placeholder="Example: B.Tech"
+                       value="{{ profile['graduation_degree'] if profile else '' }}">
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    Course / Branch
+                </label>
+
+                <input type="text"
+                       name="branch"
+                       placeholder="Example: Computer Science Engineering"
+                       value="{{ profile['branch'] if profile else '' }}">
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    CGPA / Percentage
+                </label>
+
+                <input type="text"
+                       name="cgpa"
+                       placeholder="Example: 8.5 CGPA"
+                       value="{{ profile['cgpa'] if profile else '' }}">
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    Graduation Status
+                </label>
+
+                <select name="graduation_status">
+
+                    <option value="">
+                        Select
+                    </option>
+
+                    <option>
+                        Currently Studying
+                    </option>
+
+                    <option>
+                        Graduated
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            
+    <div class="form-group">
+        <label>💡 Career Domain You Are Interested In</label>
+        <select name="graduation_domain">
+            <option value="">Select a domain</option>
+            <option>Technology & Software</option>
+            <option>Data & Analytics</option>
+            <option>Engineering & Technical</option>
+            <option>Business & Finance</option>
+            <option>Law & Public Policy</option>
+            <option>Government & Public Service</option>
+            <option>Healthcare & Life Sciences</option>
+            <option>Research & Science</option>
+            <option>Design & Creative Careers</option>
+            <option>Media & Communication</option>
+            <option>Education</option>
+            <option>Psychology & Social Sciences</option>
+            <option>Agriculture & Environment</option>
+            <option>Not Sure — Help Me Decide</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>🎯 What Is Your Main Career Goal?</label>
+        <select name="graduation_goal">
+            <option value="">Select your goal</option>
+            <option>Get a job</option>
+            <option>Higher studies</option>
+            <option>Prepare for competitive exams</option>
+            <option>Build a startup or business</option>
+            <option>Explore career options</option>
+            <option>Not sure yet</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>🧭 Preferred Work Style</label>
+        <select name="graduation_work_style">
+            <option value="">Select your preferred work style</option>
+            <option>Technology / Computer</option>
+            <option>Numbers / Data</option>
+            <option>People / Helping</option>
+            <option>Research / Lab</option>
+            <option>Creative / Design</option>
+            <option>Managing / Leading</option>
+            <option>Outdoors / Field</option>
+            <option>Hands-on / Practical</option>
+            <option>Speaking / Writing</option>
+            <option>Structured Rules</option>
+            <option>Independent / Innovation</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>❤️ Your Career Interests</label>
+        <input type="text"
+               name="graduation_interests"
+               placeholder="Example: AI, software, finance, teaching, design"
+               value="{{ profile['graduation_interests'] if profile else '' }}">
+    </div>
+
+    <div class="form-group full-width">
+        <label>🛠️ Your Current Skills</label>
+
+        <small class="field-help">
+            Select the skills you already know or have started learning.
+        </small>
+
+        <div class="graduation-skill-grid">
+
+    <label class="graduation-skill-option">
+        <input type="checkbox" name="graduation_skills" value="Python">
+        <span>Python</span>
+    </label>
+
+    <label class="graduation-skill-option">
+        <input type="checkbox" name="graduation_skills" value="JavaScript">
+        <span>JavaScript</span>
+    </label>
+
+    <label class="graduation-skill-option">
+        <input type="checkbox" name="graduation_skills" value="Java">
+        <span>Java</span>
+    </label>
+
+    <label class="graduation-skill-option">
+        <input type="checkbox" name="graduation_skills" value="C++">
+        <span>C++</span>
+    </label>
+
+    <label class="graduation-skill-option">
+        <input type="checkbox" name="graduation_skills" value="SQL">
+        <span>SQL</span>
+    </label>
+
+    <label class="graduation-skill-option">
+        <input type="checkbox" name="graduation_skills" value="Excel">
+        <span>Excel</span>
+    </label>
+
+    <label class="graduation-skill-option">
+        <input type="checkbox" name="graduation_skills" value="Git">
+        <span>Git</span>
+    </label>
+
+    <label class="graduation-skill-option">
+        <input type="checkbox" name="graduation_skills" value="Data Structures">
+        <span>Data Structures</span>
+    </label>
+
+    <label class="graduation-skill-option">
+        <input type="checkbox" name="graduation_skills" value="Statistics">
+        <span>Statistics</span>
+    </label>
+
+    <label class="graduation-skill-option">
+        <input type="checkbox" name="graduation_skills" value="Machine Learning">
+        <span>Machine Learning</span>
+    </label>
+
+    <label class="graduation-skill-option">
+        <input type="checkbox" name="graduation_skills" value="Communication">
+        <span>Communication</span>
+    </label>
+
+    <label class="graduation-skill-option">
+        <input type="checkbox" name="graduation_skills" value="Problem Solving">
+        <span>Problem Solving</span>
+    </label>
+
+    <label class="graduation-skill-option">
+        <input type="checkbox" name="graduation_skills" value="UI/UX Design">
+        <span>UI/UX Design</span>
+    </label>
+
+    <label class="graduation-skill-option">
+        <input type="checkbox" name="graduation_skills" value="Figma">
+        <span>Figma</span>
+    </label>
+
+    <label class="graduation-skill-option">
+        <input type="checkbox" name="graduation_skills" value="Networking">
+        <span>Networking</span>
+    </label>
+
+    <label class="graduation-skill-option">
+        <input type="checkbox" name="graduation_skills" value="Linux">
+        <span>Linux</span>
+    </label>
+
+</div>
+    </div>
+
+
+    <div class="stage-save-card" data-save-stage="graduation">
+
+        <div class="stage-save-icon">
+            💾
+        </div>
+
+        <div class="stage-save-content">
+
+            <h3>
+                Save Your Graduation Profile
+            </h3>
+
+            <p>
+                Save your degree, branch and current status to build your personalized graduation-stage guidance.
+            </p>
+
+            <div
+                class="stage-edit-status"
+                data-stage-status="graduation">
+            </div>
+
+            <button
+                type="button"
+                class="profile-button stage-save-button"
+                onclick="saveGraduationProfile()">
+                Save Graduation Profile
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= GRADUATION RESULTS ================= -->
+
+<div id="graduation-results"
+     class="stage-results"
+     data-stage="graduation"
+     style="display:none;">
+
+    <div class="stage-results-banner">
+        <strong>🎓 Your Graduation Career Recommendations</strong>
+        <span>
+            These recommendations will be generated from your Graduation profile and career assessment.
+        </span>
+    </div>
+
+    {% if graduation_recommendations %}
+
+    <div class="recommendation-panel">
+
+        <div class="section-heading">
+
+            <div class="section-number">
+                🎯
+            </div>
+
+            <div>
+                <h2>Recommended Graduation Careers</h2>
+                <p>
+                    These careers are matched to your degree, interests,
+                    goals, work style and skills.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="recommendation-grid">
+
+            {% for career in graduation_recommendations %}
+
+            <div class="recommendation-card">
+
+                <div class="recommendation-card-header">
+
+                    <h3>
+                        {{ career.career }}
+                    </h3>
+
+                    <span>
+                        {{ career.score }}% match
+                    </span>
+
+                </div>
+
+
+                <div class="recommendation-detail">
+
+                    <strong>🏷 Domain</strong>
+                    <p>{{ career.domain }}</p>
+
+                    <strong>💡 Why this matches you</strong>
+
+                    <ul>
+                        {% for reason in career.why_match %}
+                        <li>{{ reason }}</li>
+                        {% endfor %}
+                    </ul>
+
+                </div>
+
+
+                <details class="career-details-accordion">
+
+                    <summary>
+                        🔍 View Career Details
+                    </summary>
+
+                    <div class="career-details-expanded">
+
+                        <div class="career-expanded-item">
+
+                            <strong>📊 Match Breakdown</strong>
+
+                            {% for item, value in career.match_breakdown.items() %}
+
+                            <p>
+                                <b>{{ item }}:</b>
+                                {{ value }} points
+                            </p>
+
+                            {% endfor %}
+
+                        </div>
+
+
+                        <div class="career-expanded-item">
+
+                            <strong>🎓 Education Path</strong>
+
+                            <p>
+                                {{ career.degree_paths }}
+                            </p>
+
+                        </div>
+
+
+                        <div class="career-expanded-item">
+
+                            <strong>🛠 Skills to Develop</strong>
+
+                            <ul>
+                                {% for skill in career.skills %}
+                                <li>{{ skill }}</li>
+                                {% endfor %}
+                            </ul>
+
+                        </div>
+
+
+                        <div class="career-expanded-item">
+
+                            <strong>🚀 Beginner Action</strong>
+
+                            <p>
+                                {{ career.beginner_action }}
+                            </p>
+
+                        </div>
+
+
+                        <div class="career-expanded-item">
+
+                            <strong>🌟 Career Opportunities</strong>
+
+                            <ul>
+                                {% for opportunity in career.opportunities %}
+                                <li>{{ opportunity }}</li>
+                                {% endfor %}
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </details>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+    {% if graduation_skill_gap and graduation_skill_gap.career %}
+
+    <div class="recommendation-panel graduation-skill-gap-panel">
+
+        <div class="section-heading">
+
+            <div class="section-number">
+                🧩
+            </div>
+
+            <div>
+                <h2>Graduation Skill Gap Analysis</h2>
+                <p>
+                    See which skills you already have and which skills
+                    can strengthen your recommended career pathway.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="skill-gap-summary">
+
+            <div class="skill-gap-highlight">
+                <strong>🎯 Recommended Career</strong>
+                <span>{{ graduation_skill_gap.career }}</span>
+            </div>
+
+            <div class="skill-gap-highlight">
+                <strong>📈 Skill Coverage</strong>
+                <span>{{ graduation_skill_gap.coverage }}%</span>
+            </div>
+
+        </div>
+
+
+        <div class="skill-gap-columns">
+
+            <div class="career-expanded-item skill-gap-possessed">
+
+                <strong>✅ Skills You Already Have</strong>
+
+                {% if graduation_skill_gap.possessed %}
+
+                <ul>
+                    {% for skill in graduation_skill_gap.possessed %}
+                    <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+
+                {% else %}
+
+                <p>No matching skills recorded yet.</p>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="career-expanded-item skill-gap-missing">
+
+                <strong>📚 Skills You Need to Develop</strong>
+
+                {% if graduation_skill_gap.missing %}
+
+                <ul>
+                    {% for skill in graduation_skill_gap.missing %}
+                    <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+
+                {% else %}
+
+                <p>Your current skills cover the listed career skills.</p>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+
+        {% if graduation_skill_gap.priority %}
+
+        <div class="career-expanded-item">
+
+            <strong>🚀 Priority Skills to Learn First</strong>
+
+            <p>
+                Start with these skills to strengthen your career readiness:
+            </p>
+
+            <ol>
+                {% for skill in graduation_skill_gap.priority %}
+                <li>{{ skill }}</li>
+                {% endfor %}
+            </ol>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+    {% endif %}
+
+    {% if graduation_higher_education %}
+
+    <div class="recommendation-panel graduation-higher-education-panel">
+
+        <div class="section-heading">
+
+            <div class="section-number">
+                🎓
+            </div>
+
+            <div>
+                <h2>Higher Studies & Specializations</h2>
+                <p>
+                    Explore postgraduate and specialization pathways
+                    related to your Graduation profile and recommended career.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="recommendation-grid">
+
+            {% for option in graduation_higher_education %}
+
+            <div class="recommendation-card">
+
+                <div class="recommendation-card-header">
+
+                    <h3>{{ option.title }}</h3>
+
+                    <span>
+                        {{ option.category }}
+                    </span>
+
+                </div>
+
+                <div class="recommendation-detail">
+
+                    <strong>💡 Why consider this?</strong>
+                    <p>{{ option.reason }}</p>
+
+                    <strong>🎯 Main Focus</strong>
+                    <p>{{ option.focus }}</p>
+
+                    <strong>👥 Suitable For</strong>
+                    <p>{{ option.suitable_for }}</p>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+    {% if graduation_exams %}
+
+    <div class="recommendation-panel graduation-exams-panel">
+
+        <div class="section-heading">
+
+            <div class="section-number">
+                🏆
+            </div>
+
+            <div>
+                <h2>Competitive Exams & Opportunities</h2>
+                <p>
+                    Explore exam pathways that may align with your Graduation
+                    profile, goals and recommended career direction.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="recommendation-grid">
+
+            {% for exam in graduation_exams %}
+
+            <div class="recommendation-card">
+
+                <div class="recommendation-card-header">
+
+                    <h3>{{ exam.name }}</h3>
+
+                    <span>
+                        {{ exam.category }}
+                    </span>
+
+                </div>
+
+                <div class="recommendation-detail">
+
+                    <strong>💡 Why it may be relevant</strong>
+                    <p>{{ exam.relevance }}</p>
+
+                    <strong>📚 Preparation Direction</strong>
+                    <p>{{ exam.preparation }}</p>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+    {% if graduation_jobs %}
+
+    <div class="recommendation-panel graduation-jobs-panel">
+
+        <div class="section-heading">
+
+            <div class="section-number">
+                🏢
+            </div>
+
+            <div>
+                <h2>Career Opportunities & Job Roles</h2>
+                <p>
+                    Explore job roles, entry-level opportunities,
+                    skill requirements and common work areas
+                    connected to your recommended careers.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="recommendation-grid">
+
+            {% for job in graduation_jobs %}
+
+            <div class="recommendation-card">
+
+                <div class="recommendation-card-header">
+
+                    <h3>{{ job.career }}</h3>
+
+                    <span>
+                        Career Opportunities
+                    </span>
+
+                </div>
+
+                <div class="recommendation-detail">
+
+                    <strong>💼 Relevant Job Roles</strong>
+
+                    <ul>
+                        {% for role in job.roles %}
+                        <li>{{ role }}</li>
+                        {% endfor %}
+                    </ul>
+
+                    <strong>🌱 Entry-Level Opportunities</strong>
+
+                    <ul>
+                        {% for role in job.entry_level %}
+                        <li>{{ role }}</li>
+                        {% endfor %}
+                    </ul>
+
+                    <strong>🛠 Key Skills</strong>
+
+                    <ul>
+                        {% for skill in job.skills %}
+                        <li>{{ skill }}</li>
+                        {% endfor %}
+                    </ul>
+
+                    <strong>🏭 Common Work Areas</strong>
+
+                    <ul>
+                        {% for area in job.work_areas %}
+                        <li>{{ area }}</li>
+                        {% endfor %}
+                    </ul>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+
+<div id="after12-results"
+     class="stage-results"
+     data-stage="after_12th"
+     style="display:none;">
+
+    <div class="stage-results-banner">
+        <strong>📊 Your Saved After 12th Recommendations</strong>
+        <span id="after12-results-message">
+            These recommendations are generated from your saved After 12th profile.
+        </span>
+    </div>
+<!-- ======================================
+             AFTER 12TH CAREER RECOMMENDATIONS
+             ====================================== -->
+
+        {% if profile and profile['education_stage'] == 'after_12th' and after12th_recommendations %}
+
+        <div class="recommendation-panel">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    ✨
+                </div>
+
+                <div>
+
+                    <h2>
+                        CareerCompass AI Recommendations
+                    </h2>
+
+                    <p>
+                        Based on your stream, strongest subjects,
+                        interests and skills.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="recommendation-grid">
+
+                {% for recommendation in after12th_recommendations %}
+
+                <div class="recommendation-card">
+
+                    <div class="recommendation-card-header">
+
+                        <h3>
+                            {{ recommendation.career }}
+                        </h3>
+
+                        <span class="recommendation-score">
+                            {{ recommendation.score }}%
+                        </span>
+
+                    </div>
+
+
+                    <p class="recommendation-domain">
+                        {{ recommendation.domain }}
+                    </p>
+
+
+                    <div class="recommendation-detail">
+
+                        <strong>
+                            🎓 Suggested Degrees
+                        </strong>
+
+                        <ul>
+
+                            {% for degree in recommendation.degrees %}
+
+                            <li>
+                                {{ degree }}
+                            </li>
+
+                            {% endfor %}
+
+                        </ul>
+
+                    </div>
+
+
+
+
+                        <div class="recommendation-detail">
+
+                        <strong>
+                            💡 Why This Career Matches You
+                        </strong>
+
+                        <p>
+                            {{ recommendation.why_match }}
+                        </p>
+
+                    </div>
+                     
+                    <div class="recommendation-detail">
+
+
+
+
+
+<strong>
+    📊 Career Match Breakdown
+</strong>
+
+<ul class="match-breakdown-list">
+
+
+{% set max_points = {
+    "Career Interest": 25,
+    "Subject Match": 20,
+    "Problem Type": 15,
+    "Work Style": 15,
+    "Skills Match": 10,
+    "Stream Match": 10,
+    "Career Direction": 5
+} %}
+
+
+    {% for category, points in recommendation.match_breakdown.items() %}
+
+    <li>
+        <div class="match-breakdown-label">
+            <span>{{ category }}</span>
+             <strong>{{ points }}/{{ max_points[category] }} · {{ (points / max_points[category] * 100) | round }}%</strong>
+        </div>
+
+        <div class="match-progress">
+            <div
+                class="match-progress-fill"
+                style="width: {{ (points / max_points[category] * 100) | round }}%;"
+            ></div>
+        </div>
+    </li>
+
+    {% endfor %}
+
+</ul>
+
+
+                    <div class="recommendation-detail">
+
+                        <strong>
+                            🛠️ Skills to Develop
+                        </strong>
+
+                        <div class="skill-list">
+
+                            {% for skill in recommendation.skills %}
+
+                            <span class="skill-tag">
+                                {{ skill }}
+                            </span>
+
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+                    
+
+                    
+
+                    
+
+                    <details class="career-details-accordion">
+    <summary>🔍 View Career Details</summary>
+
+    <div class="career-details-expanded">
+
+        <div class="career-expanded-item">
+            <strong>📊 Match Score</strong>
+            <span>{{ recommendation.score }}%</span>
+        </div>
+
+        {% if recommendation.why_match %}
+        <div class="career-expanded-item">
+            <strong>💡 Why This Career Matches You</strong>
+            <p>{{ recommendation.why_match }}</p>
+        </div>
+        {% endif %}
+
+        {% if recommendation.related_subjects %}
+        <div class="career-expanded-item">
+            <strong>📚 Relevant Subjects</strong>
+            <p>{{ recommendation.related_subjects | join(", ") }}</p>
+        </div>
+        {% endif %}
+
+        {% if recommendation.degrees %}
+        <div class="career-expanded-item">
+            <strong>🎓 Suggested Degrees</strong>
+            <ul>
+                {% for degree in recommendation.degrees %}
+                <li>{{ degree }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        {% if recommendation.education_path %}
+        <div class="career-expanded-item">
+            <strong>🧭 Education Path</strong>
+            <p>{{ recommendation.education_path }}</p>
+        </div>
+        {% endif %}
+
+        {% if recommendation.skills %}
+        <div class="career-expanded-item">
+            <strong>🛠️ Skills to Develop</strong>
+            <ul>
+                {% for skill in recommendation.skills %}
+                <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        {% if recommendation.beginner_action %}
+        <div class="career-expanded-item">
+            <strong>🚀 Beginner Action</strong>
+            <p>{{ recommendation.beginner_action }}</p>
+        </div>
+        {% endif %}
+
+        {% if recommendation.opportunities %}
+        <div class="career-expanded-item">
+            <strong>💼 Opportunities to Explore</strong>
+            <ul>
+                {% for opportunity in recommendation.opportunities %}
+                <li>{{ opportunity }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+    </div>
+</details>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+            {% for recommendation in after12th_recommendations %}
+
+            <div
+                id="after12CareerModal{{ loop.index }}"
+                class="career-modal"
+                aria-hidden="true">
+
+                <div
+                    class="career-modal-overlay"
+                    onclick="closeCareerModal('after12CareerModal{{ loop.index }}')">
+                </div>
+
+                <div
+                    class="career-modal-content"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="after12CareerModalTitle{{ loop.index }}">
+
+                    <button
+                        type="button"
+                        class="career-modal-close"
+                        onclick="closeCareerModal('after12CareerModal{{ loop.index }}')"
+                        aria-label="Close career details">
+                        ×
+                    </button>
+
+                    <div class="career-modal-heading">
+                        <div class="career-modal-icon">🎯</div>
+                        <div>
+                            <h2 id="after12CareerModalTitle{{ loop.index }}">
+                                {{ recommendation.career }}
+                            </h2>
+                            <p>{{ recommendation.domain }}</p>
+                        </div>
+                    </div>
+
+                    <div class="career-modal-section">
+                        <h3>📊 Match Score</h3>
+                        <div class="career-modal-score">
+                            {{ recommendation.score }}%
+                        </div>
+                    </div>
+
+                    {% if recommendation.why_match %}
+                    <div class="career-modal-section">
+                        <h3>💡 Why This Career Matches You</h3>
+                        <p>{{ recommendation.why_match }}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if recommendation.related_subjects %}
+                    <div class="career-modal-section">
+                        <h3>📚 Relevant Subjects</h3>
+                        <p>{{ recommendation.related_subjects | join(", ") }}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if recommendation.degrees %}
+                    <div class="career-modal-section">
+                        <h3>🎓 Suggested Degrees</h3>
+                        <ul>
+                            {% for degree in recommendation.degrees %}
+                            <li>{{ degree }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+
+                    {% if recommendation.education_path %}
+                    <div class="career-modal-section">
+                        <h3>🧭 Education Path</h3>
+                        <p>{{ recommendation.education_path }}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if recommendation.skills %}
+                    <div class="career-modal-section">
+                        <h3>🛠️ Skills to Develop</h3>
+                        <ul>
+                            {% for skill in recommendation.skills %}
+                            <li>{{ skill }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+
+                    {% if recommendation.beginner_action %}
+                    <div class="career-modal-section">
+                        <h3>🚀 Beginner Action</h3>
+                        <p>{{ recommendation.beginner_action }}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if recommendation.opportunities %}
+                    <div class="career-modal-section">
+                        <h3>💼 Opportunities to Explore</h3>
+                        <ul>
+                            {% for opportunity in recommendation.opportunities %}
+                            <li>{{ opportunity }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    
+  {% endif %}
+
+
+<!-- ======================================
+     AFTER 12TH PERSONALIZED LEARNING ROADMAP
+     ====================================== -->
+
+{% if profile and profile['education_stage'] == 'after_12th' and after12th_learning_roadmap %}
+
+<div class="recommendation-panel">
+
+    <div class="section-heading">
+
+        <div class="section-number">
+            03
+        </div>
+
+        <div>
+            <h2>🗺️ Your Personalized Learning Roadmap</h2>
+
+            <p>
+                Follow these steps to build the skills needed for your
+                recommended career.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="learning-roadmap">
+
+        {% for step in after12th_learning_roadmap %}
+
+        <div class="learning-roadmap-step">
+
+            <div class="roadmap-number">
+                {{ step.stage }}
+            </div>
+
+            <div class="roadmap-content">
+
+                <h3>{{ step.title }}</h3>
+
+                <p>
+                    {{ step.goal }}
+                </p>
+
+                <div class="skill-list">
+
+                    {% for skill in step.skills %}
+
+                    <span class="skill-tag">
+                        {{ skill }}
+                    </span>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endif %}
+<!-- ======================================
+     AFTER 12TH FREE LEARNING RESOURCES
+     ====================================== -->
+
+{% if profile and profile['education_stage'] == 'after_12th' and after12th_learning_resources %}
+
+<div class="recommendation-panel">
+
+    <div class="section-heading">
+
+        <div class="section-number">
+            04
+        </div>
+
+        <div>
+            <h2>📚 Free Learning Resources</h2>
+
+            <p>
+                Explore free resources selected to help you
+                build the skills in your personalized learning roadmap.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="learning-resources">
+
+        {% for resource in after12th_learning_resources %}
+
+        <div class="learning-resource-card">
+
+            <div class="resource-stage">
+                Stage {{ resource.stage }}
+            </div>
+
+            <h3>
+                {{ resource.title }}
+            </h3>
+
+            <p class="resource-type">
+                {{ resource.type }}
+            </p>
+
+            <p>
+                {{ resource.resource }}
+            </p>
+
+            <a
+                href="{{ resource.url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resource-button"
+            >
+                🔗 Open Resource
+            </a>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======================================
+     AFTER 12TH HIGHER EDUCATION GUIDANCE
+     ====================================== -->
+
+{% if profile and profile['education_stage'] == 'after_12th' and after12th_higher_education %}
+
+<div class="recommendation-panel">
+
+    <div class="section-heading">
+
+        <div class="section-number">
+            🎓
+        </div>
+
+        <div>
+            <h2>
+                Higher Education Guidance
+            </h2>
+
+            <p>
+                Degree and higher education options related to your
+                selected career domain.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="recommendation-grid">
+
+        {% for degree in after12th_higher_education %}
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-card-header">
+
+                <h3>
+                    {{ degree }}
+                </h3>
+
+                <span class="recommendation-score">
+                    After 12th
+                </span>
+
+            </div>
+
+            <p class="recommendation-domain">
+                Higher Education Option
+            </p>
+
+            <div class="recommendation-detail">
+
+                <strong>🎓 Education Path</strong>
+
+                <p>
+                    This undergraduate education option can support
+                    further study and career development in your
+                    selected domain.
+                </p>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endif %}
+
+
+
+<!-- ======================================
+     AFTER 12TH SKILL GAP ANALYSIS
+     ====================================== -->
+
+{% if profile and profile['education_stage'] == 'after_12th' and (after12th_skill_gap.possessed or after12th_skill_gap.missing) %}
+
+<div class="recommendation-panel">
+
+    <div class="section-heading">
+
+        <div class="section-number">
+            🛠️
+        </div>
+
+        <div>
+            <h2>
+                Skill Gap Analysis
+            </h2>
+
+            <p>
+                Compare your current skills with the skills needed
+                for your top recommended career.
+            </p>
+        </div>
+
+    </div>
+
+    {% if after12th_skill_gap.possessed %}
+
+    <div class="recommendation-detail">
+
+        <strong>✅ Skills You Already Have</strong>
+
+        <div class="skill-list">
+
+            {% for skill in after12th_skill_gap.possessed %}
+
+            <span class="skill-tag">
+                {{ skill }}
+            </span>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+{% if after12th_skill_gap.skill_details %}
+
+<div class="recommendation-detail">
+
+    <strong>🛠️ Skill Gap Analysis</strong>
+
+    <p>
+        Compare your current skills with the skills needed for your top recommended career.
+    </p>
+
+    <div class="skill-gap-list">
+
+        {% for skill in after12th_skill_gap.skill_details %}
+
+        <div class="skill-gap-item">
+
+            <div class="skill-gap-info">
+
+                <strong>{{ skill.skill }}</strong>
+
+                <span class="
+                    {% if skill.status == 'Available' %}
+                        skill-status-available
+                    {% else %}
+                        skill-status-missing
+                    {% endif %}
+                ">
+                    {{ skill.status }}
+                </span>
+
+            </div>
+
+            <span class="skill-importance">
+                {{ skill.importance }} importance
+            </span>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endif %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+
+        <!-- ======================================
+             AFTER 12TH COMPETITIVE EXAM GUIDANCE
+             ====================================== -->
+
+        {% if profile and profile['education_stage'] == 'after_12th' and after12th_exams %}
+
+        <div class="recommendation-panel">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    📝
+                </div>
+
+                <div>
+                    <h2>
+                        Competitive Exam Guidance
+                    </h2>
+
+                    <p>
+                        Exams that may be relevant to your selected
+                        career domain and stream.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="recommendation-grid">
+
+                {% for exam in after12th_exams %}
+
+                <div class="recommendation-card">
+
+                    <div class="recommendation-card-header">
+
+                        <h3>
+                            {{ exam.exam }}
+                        </h3>
+
+                        <span class="recommendation-score">
+                            After 12th
+                        </span>
+
+                    </div>
+
+
+                    <p class="recommendation-domain">
+                        {{ exam.purpose }}
+                    </p>
+
+
+                    <div class="recommendation-detail">
+
+                        <strong>
+                            🎯 Purpose
+                        </strong>
+
+                        <p>
+                            {{ exam.purpose }}
+                        </p>
+
+                    </div>
+
+
+                    <div class="recommendation-detail">
+
+                        <strong>
+                            📚 Relevant Subjects
+                        </strong>
+
+                        <div class="skill-list">
+
+                            {% for subject in exam.subjects %}
+
+                            <span class="skill-tag">
+                                {{ subject }}
+                            </span>
+
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="recommendation-detail">
+
+                        <strong>
+                            🎓 Suitable Streams
+                        </strong>
+
+                        <div class="skill-list">
+
+                            {% for stream in exam.streams %}
+
+                            <span class="skill-tag">
+                                {{ stream }}
+                            </span>
+
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    {% if exam.subject_matches %}
+
+                    <div class="recommendation-detail">
+
+                        <strong>
+                            ⭐ Your Subject Match
+                        </strong>
+
+                        <div class="skill-list">
+
+                            {% for subject in exam.subject_matches %}
+
+                            <span class="skill-tag">
+                                {{ subject|title }}
+                            </span>
+
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+                    {% endif %}
+
+
+
+
+                    {% if exam.relevance %}
+
+                    <div class="recommendation-detail">
+
+                        <strong>
+                            💡 Why This Exam May Suit You
+                        </strong>
+
+                        <p>
+                            {{ exam.relevance }}
+                        </p>
+
+                    </div>
+
+                    {% endif %}
+
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+        {% if profile and profile['education_stage'] == 'after_12th' and after12th_exam_preparation %}
+
+        <div class="recommendation-section">
+
+            <div class="section-header">
+
+                <div class="section-icon">
+                    📖
+                </div>
+
+                <div>
+                    <h2>Exam Preparation Guidance</h2>
+                    <p>
+                        A preparation roadmap for your recommended exams.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="recommendation-grid">
+
+                {% for preparation in after12th_exam_preparation %}
+
+                <div class="recommendation-card">
+
+                    <div class="recommendation-card-header">
+                        <h3>{{ preparation.exam }}</h3>
+
+                        <span class="recommendation-score">
+                            Preparation Plan
+                        </span>
+                    </div>
+
+                    <div class="recommendation-detail">
+
+                        <strong>🎯 Key Focus Areas</strong>
+
+                        <div class="skill-list">
+
+                            {% for focus in preparation.focus %}
+
+                            <span class="skill-tag">
+                                {{ focus }}
+                            </span>
+
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+                    <div class="recommendation-detail">
+
+
+
+
+                    </div>
+
+
+                    {% if preparation.subject_matches %}
+                    {% if preparation.preparation_priority %}
+
+<div class="recommendation-detail">
+
+    <strong>📌 Preparation Priority</strong>
+
+    <div class="skill-list">
+
+        {% for subject in preparation.preparation_priority %}
+
+        <span class="skill-tag">
+            {{ subject }}
+        </span>
+
+        {% endfor %}
+
+    </div>
+
+    <p>
+        Give additional preparation attention to these areas.
+    </p>
+
+</div>
+
+{% else %}
+
+<div class="recommendation-detail">
+
+    <strong>📌 Preparation Priority</strong>
+
+    <p>
+        Your strongest subjects cover the main exam focus areas.
+        Continue balanced preparation across all subjects.
+    </p>
+
+</div>
+
+{% endif %}
+
+                    <div class="recommendation-detail">
+
+                        <strong>⭐ Your Subject Focus</strong>
+
+                        <div class="skill-list">
+
+                            {% for subject in preparation.subject_matches %}
+
+                            <span class="skill-tag">
+                                {{ subject|title }}
+                            </span>
+
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+                    {% endif %}
+
+
+                    <div class="recommendation-detail">
+
+                     
+
+
+                        <strong>🗺️ Preparation Roadmap</strong>
+
+                        <ol>
+
+                            {% for step in preparation.roadmap %}
+
+                            <li>{{ step }}</li>
+
+                            {% endfor %}
+
+                        </ol>
+
+                    </div>
+
+                    <div class="recommendation-detail">
+
+                        <strong>📝 Practice Strategy</strong>
+
+                        <p>{{ preparation.practice }}</p>
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+        {% endif %}
+<!-- ==========================================
+     AFTER 12TH CAREER ROADMAP SUMMARY
+     ========================================== -->
+
+{% if profile and profile['education_stage'] == 'after_12th' and after12th_career_roadmap %}
+
+<div class="recommendation-section">
+
+    <div class="section-header">
+
+        <div class="section-icon">
+            🧭
+        </div>
+
+        <div>
+            <h2>Your Career Roadmap</h2>
+            <p>
+                Your personalized path from your current stage toward your career goal.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="recommendation-grid">
+
+        <!-- Recommended Career -->
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-card-header">
+                <h3>🎯 Recommended Career</h3>
+
+                {% if after12th_career_roadmap.match_score %}
+                <span class="recommendation-score">
+                    {{ after12th_career_roadmap.match_score }}% Match
+                </span>
+                {% endif %}
+
+            </div>
+
+            <div class="recommendation-detail">
+
+                <strong>Career</strong>
+
+                <p>
+                    {{ after12th_career_roadmap.career }}
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Higher Education -->
+
+        {% if after12th_career_roadmap.higher_education %}
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-card-header">
+                <h3>🎓 Suggested Higher Education</h3>
+            </div>
+
+            <div class="recommendation-detail">
+
+                <div class="skill-list">
+
+                    {% for course in after12th_career_roadmap.higher_education %}
+
+                    <span class="skill-tag">
+                        {{ course }}
+                    </span>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+
+        <!-- Competitive Exams -->
+
+        {% if after12th_career_roadmap.exams %}
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-card-header">
+                <h3>📝 Relevant Competitive Exams</h3>
+            </div>
+
+            <div class="recommendation-detail">
+
+                <div class="skill-list">
+
+                    {% for exam in after12th_career_roadmap.exams %}
+
+                    <span class="skill-tag">
+                        {{ exam.exam }}
+                    </span>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+
+        <!-- Skills -->
+
+        {% if after12th_career_roadmap.skills_to_develop %}
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-card-header">
+                <h3>🧠 Skills to Develop</h3>
+            </div>
+
+            <div class="recommendation-detail">
+
+                <div class="skill-list">
+
+                    {% for skill in after12th_career_roadmap.skills_to_develop %}
+
+                    <span class="skill-tag">
+                        {{ skill }}
+                    </span>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+
+        <!-- Learning Roadmap -->
+
+        {% if after12th_career_roadmap.learning_roadmap %}
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-card-header">
+                <h3>🗺️ Learning Roadmap</h3>
+            </div>
+
+            <div class="recommendation-detail">
+
+                <ol>
+
+                    {% for stage in after12th_career_roadmap.learning_roadmap %}
+
+                    <li>
+                        <strong>{{ stage.title }}</strong>
+                        — {{ stage.goal }}
+                    </li>
+
+                    {% endfor %}
+
+                </ol>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+
+        <!-- Free Resources -->
+
+        {% if after12th_career_roadmap.learning_resources %}
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-card-header">
+                <h3>📚 Free Learning Resources</h3>
+            </div>
+
+            <div class="recommendation-detail">
+
+                <div class="skill-list">
+
+                    {% for resource in after12th_career_roadmap.learning_resources %}
+
+                    <a href="{{ resource.url }}"
+                       target="_blank"
+                       class="skill-tag">
+                        {{ resource.resource }}
+                    </a>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% endif %}       
+
+ {% endif %}
+
+
+
+
+<!-- ==========================================
+     AFTER 12TH PERSONALIZED NEXT STEPS
+     ========================================== -->
+
+{% if profile and profile['education_stage'] == 'after_12th' and after12th_next_steps %}
+
+<div class="recommendation-section">
+
+    <div class="section-header">
+
+        <div class="section-icon">
+            🚀
+        </div>
+
+        <div>
+            <h2>Your Personalized Next Steps</h2>
+            <p>
+                Follow these practical steps to move forward with your career journey.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="recommendation-grid">
+
+        {% for step in after12th_next_steps %}
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-card-header">
+                <h3>
+                    {{ step.icon }}
+                    Step {{ step.number }} — {{ step.title }}
+                </h3>
+            </div>
+
+            <div class="recommendation-detail">
+
+                <strong>Focus</strong>
+
+                <p>{{ step.focus }}</p>
+
+                <strong>What to do</strong>
+
+                <p>{{ step.action }}</p>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endif %}
+
+
+
+
+    </section>
+
+
+
+    <!-- ================= SAVE ================= -->
+
+    
+
+</main>
+
+
+
+
+<style>
+
+.stage-results {
+    display: none;
+}
+
+.stage-results-banner {
+    margin: 0 0 24px 0;
+    padding: 16px 20px;
+    border-radius: 16px;
+    background: #f5f7ff;
+    border: 1px solid #e1e6ff;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stage-results-banner strong {
+    font-size: 16px;
+}
+
+.stage-results-banner span {
+    font-size: 14px;
+    opacity: 0.78;
+    line-height: 1.5;
+}
+
+.stage-edit-status {
+    margin: 18px 0;
+    padding: 15px 18px;
+    border-radius: 14px;
+    background: #fff8e8;
+    border: 1px solid #f1dfad;
+    line-height: 1.5;
+}
+
+.stage-edit-status.saved {
+    background: #eefaf3;
+    border-color: #cfe8d8;
+}
+
+.stage-edit-status strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.career-modal {
+    display: none !important;
+}
+
+.career-modal.active {
+    display: flex !important;
+}
+
+</style>
+
+
+<style>
+.stage-save-section {
+    margin: 28px 0;
+    padding: 22px;
+    border-radius: 18px;
+    border: 1px solid #dfe5f2;
+    background: #f8faff;
+}
+
+.stage-save-section .profile-button {
+    min-width: 180px;
+}
+
+.stage-edit-status {
+    margin: 18px 0;
+    padding: 15px 18px;
+    border-radius: 14px;
+    background: #fff8e8;
+    border: 1px solid #f0dda8;
+    line-height: 1.5;
+}
+
+.stage-edit-status.saved {
+    background: #eef9f1;
+    border-color: #cce6d2;
+}
+
+.stage-edit-status strong {
+    display: block;
+    margin-bottom: 4px;
+}
+</style>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+/*
+ * Temporary save function.
+ *
+ * Database connection will be added in the next step.
+ */
+
+function saveGraduationProfile() {
+
+    const section = document.getElementById("graduation");
+
+    if (!section) {
+        alert("Graduation section could not be found.");
+        return;
+    }
+
+    const formData = new FormData();
+
+    section.querySelectorAll("input, select, textarea").forEach(function(field) {
+
+        if (!field.name) {
+            return;
+        }
+
+        if (field.type === "checkbox" || field.type === "radio") {
+
+            if (field.checked) {
+                formData.append(field.name, field.value);
+            }
+
+            return;
+        }
+
+        formData.append(field.name, field.value);
+    });
+
+    fetch("/save-graduation", {
+        method: "POST",
+        body: formData
+    })
+    .then(function(response) {
+
+        if (response.redirected) {
+            window.location.href = response.url;
+            return;
+        }
+
+        return response.text();
+    })
+    .catch(function(error) {
+
+        console.error("Graduation save error:", error);
+
+        alert("Unable to save your Graduation profile.");
+    });
+}
+
+
+function saveProfile() {
+
+    const formData = new FormData();
+
+    /*
+     * Collect all profile fields on the page
+     */
+    document.querySelectorAll("input, select, textarea").forEach(function(field) {
+
+      if (field.name) {
+
+    if (field.type === "checkbox" && !field.checked) {
+        return;
+    }
+
+    if (field.type === "radio" && !field.checked) {
+        return;
+    }
+
+    if (field.multiple) {
+
+        Array.from(field.selectedOptions).forEach(function(option) {
+            formData.append(field.name, option.value);
+        });
+
+    } else {
+
+        formData.append(field.name, field.value);
+
+    }
+
+}
+
+    });
+
+    /*
+     * Send profile data to Flask
+     */
+
+    console.log("problem_type:", formData.get("problem_type"));
+    console.log("work_style:", formData.get("work_style"));
+    console.log("skills:", formData.getAll("skills"));
+    console.log("education_stage:", formData.get("education_stage"));
+    fetch("/profile", {
+        method: "POST",
+        body: formData
+    })
+    .then(function(response) {
+
+        if (response.redirected) {
+            window.location.href = response.url;
+            return;
+        }
+
+        return response.text();
+
+    })
+    .then(function() {
+
+        alert("Your profile has been saved successfully!");
+
+    })
+    .catch(function(error) {
+
+        console.error("Profile save error:", error);
+
+        alert("Unable to save your profile. Please try again.");
+
+    });
+
+}
+
+
+
+
+
+</script>
+
+
+
+<!-- AFTER 10TH FREE LEARNING RESOURCES -->
+
+<style>
+.after10-learning-section {
+    margin: 45px 0;
+}
+
+.after10-learning-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 30px 20px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #eef6ff, #f6f0ff);
+}
+
+.after10-learning-header .resource-main-icon {
+    font-size: 46px;
+    margin-bottom: 8px;
+}
+
+.after10-learning-header h2 {
+    margin: 5px 0 10px;
+    font-size: 30px;
+    color: #173b78;
+}
+
+.after10-learning-header p {
+    margin: 0 auto;
+    max-width: 720px;
+    color: #52627a;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.learning-pathway {
+    margin: 28px 0;
+    padding: 25px;
+    border-radius: 24px;
+    background: #f8fbff;
+    border: 1px solid #dce9f8;
+}
+
+.learning-pathway-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+.learning-pathway-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.learning-pathway-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background: #e8f2ff;
+}
+
+.learning-pathway-title h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #173b78;
+}
+
+.learning-pathway-title p {
+    margin: 5px 0 0;
+    color: #65748b;
+    font-size: 14px;
+}
+
+.recommended-badge {
+    padding: 9px 16px;
+    border-radius: 30px;
+    background: #e5f3ff;
+    color: #1971d4;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.learning-resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+}
+
+.learning-resource-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #e0e9f4;
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 8px 24px rgba(35, 76, 125, 0.07);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.learning-resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(35, 76, 125, 0.12);
+}
+
+.resource-card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.resource-icon-box {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #edf4ff, #f1eaff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+}
+
+.resource-card-top h4 {
+    margin: 2px 0 8px;
+    color: #173b78;
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+.resource-type {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 20px;
+    background: #f0eaff;
+    color: #6844c5;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.resource-detail {
+    margin-top: 15px;
+    padding-top: 13px;
+    border-top: 1px solid #edf1f6;
+}
+
+.resource-detail strong {
+    display: block;
+    color: #214d91;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.resource-detail span {
+    color: #5d6d83;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.resource-button {
+    display: block;
+    margin-top: auto;
+    padding: 11px 15px;
+    text-align: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2878e8, #5b55d9);
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resource-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(40, 120, 232, 0.25);
+}
+
+.resource-action {
+    margin-top: auto;
+    padding-top: 11px;
+    padding: 11px 15px;
+    text-align: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2878e8, #5b55d9);
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.learning-footer {
+    margin-top: 30px;
+    padding: 22px 25px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #eef8ff, #f5f0ff);
+    text-align: center;
+}
+
+.learning-footer h3 {
+    margin: 0 0 7px;
+    color: #173b78;
+}
+
+.learning-footer p {
+    margin: 0;
+    color: #617086;
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    .after10-learning-header h2 {
+        font-size: 24px;
+    }
+
+    .learning-pathway {
+        padding: 18px;
+    }
+
+    .learning-resource-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+{% if profile and profile['education_stage'] == 'after_10th' %}
+
+<section class="after10-learning-section">
+
+    <div class="after10-learning-header">
+        <div class="resource-main-icon">📚</div>
+        <h2>After 10th Free Learning Resources</h2>
+        <p>
+            Explore free resources related to your recommended career pathways.
+            Build your skills, learn at your own pace and move closer to your future career.
+        </p>
+    </div>
+
+    {% if after10th_learning_resources %}
+
+        {% for pathway_group in after10th_learning_resources|groupby("pathway") %}
+
+            <div class="learning-pathway">
+
+                <div class="learning-pathway-header">
+
+                    <div class="learning-pathway-title">
+
+                        <div class="learning-pathway-icon">
+                            {% if "Science" in pathway_group.grouper %}
+                                🔬
+                            {% elif "Computer" in pathway_group.grouper %}
+                                💻
+                            {% elif "Commerce" in pathway_group.grouper %}
+                                💼
+                            {% elif "Humanities" in pathway_group.grouper %}
+                                📚
+                            {% elif "Engineering" in pathway_group.grouper %}
+                                ⚙️
+                            {% elif "Medicine" in pathway_group.grouper %}
+                                🩺
+                            {% elif "Defence" in pathway_group.grouper %}
+                                🛡️
+                            {% elif "Police" in pathway_group.grouper %}
+                                👮
+                            {% elif "Arts" in pathway_group.grouper %}
+                                🎨
+                            {% elif "Agriculture" in pathway_group.grouper %}
+                                🌱
+                            {% elif "Sports" in pathway_group.grouper %}
+                                🏃
+                            {% else %}
+                                🎯
+                            {% endif %}
+                        </div>
+
+                        <div>
+                            <h3>{{ pathway_group.grouper }}</h3>
+
+                            <p>
+                                Build useful skills and explore learning opportunities
+                                related to this pathway.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="recommended-badge">
+                        ⭐ Recommended Pathway
+                    </div>
+
+                </div>
+
+                <div class="learning-resource-grid">
+
+                    {% for resource in pathway_group.list %}
+
+                        <div class="learning-resource-card">
+
+                            <div class="resource-card-top">
+
+                                <div class="resource-icon-box">
+                                    {{ resource.icon }}
+                                </div>
+
+                                <div>
+                                    <h4>{{ resource.resource }}</h4>
+
+                                    <span class="resource-type">
+                                        {{ resource.type }}
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <div class="resource-detail">
+                                <strong>🎯 Focus</strong>
+                                <span>{{ resource.focus }}</span>
+                            </div>
+
+                            <div class="resource-detail">
+                                <strong>💡 Why it helps</strong>
+                                <span>{{ resource.purpose }}</span>
+                            </div>
+
+                            {% if resource.url %}
+                            <a class="resource-action"
+                               href="{{ resource.url }}"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                📖 Explore This Resource →
+                            </a>
+                            {% endif %}
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="learning-pathway">
+            <p>No learning resources are available for the selected pathways yet.</p>
+        </div>
+
+    {% endif %}
+
+    <div class="learning-footer">
+        <h3>🌱 Small steps today. Big opportunities tomorrow.</h3>
+        <p>
+            Use these resources to build your skills, explore your interests
+            and prepare for your future.
+        </p>
+    </div>
+
+</section>
+
+{% endif %}
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const activeStage = "{{ active_stage }}";
+
+    const sectionIds = {
+        "after_10th": "after-10th",
+        "after_12th": "after-12th",
+        "graduation": "graduation"
+    };
+
+    const section = document.getElementById(sectionIds[activeStage]);
+
+    if (section) {
+        setTimeout(function () {
+            section.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }, 100);
+    }
+});
+</script>
+
+</body>
+
+
+
+
+</html>
+
+<style>
+.stage-save-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin: 28px 0;
+    padding: 24px;
+    border-radius: 20px;
+    background: #f8faff;
+    border: 1px solid #dfe6f4;
+    box-shadow: 0 8px 24px rgba(40, 60, 100, 0.06);
+}
+
+.stage-save-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: #eef3ff;
+    font-size: 25px;
+}
+
+.stage-save-content {
+    flex: 1;
+}
+
+.stage-save-content h3 {
+    margin: 0 0 7px;
+}
+
+.stage-save-content p {
+    margin: 0 0 15px;
+    line-height: 1.55;
+    opacity: 0.82;
+}
+
+.stage-save-button {
+    margin-top: 12px;
+}
+
+.stage-edit-status {
+    margin-top: 12px;
+    padding: 12px 15px;
+    border-radius: 12px;
+    background: #fff8e8;
+    border: 1px solid #f0dfb3;
+    line-height: 1.45;
+}
+
+.stage-edit-status strong {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.stage-edit-status.saved {
+    background: #eef9f1;
+    border-color: #cce6d5;
+}
+
+@media (max-width: 600px) {
+    .stage-save-card {
+        flex-direction: column;
+    }
+}
+</style>
+
+
+<style>
+.career-modal,
+.career-modal.active {
+    display: none !important;
+}
+
+.career-details-accordion {
+    margin-top: 20px;
+    border: 1px solid #dfe5f1;
+    border-radius: 16px;
+    background: #f8faff;
+    overflow: hidden;
+}
+
+.career-details-accordion summary {
+    cursor: pointer;
+    padding: 15px 18px;
+    font-weight: 700;
+    list-style: none;
+    user-select: none;
+}
+
+.career-details-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.career-details-accordion summary::after {
+    content: "▼";
+    float: right;
+    font-size: 12px;
+    margin-top: 4px;
+    transition: transform 0.2s ease;
+}
+
+.career-details-accordion[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.career-details-expanded {
+    padding: 0 18px 18px;
+    border-top: 1px solid #e5e9f2;
+}
+
+.career-expanded-item {
+    margin-top: 14px;
+    padding: 14px;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.career-expanded-item strong {
+    display: block;
+    margin-bottom: 7px;
+}
+
+.career-expanded-item p {
+    margin: 0;
+    line-height: 1.55;
+}
+
+.career-expanded-item span {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.career-expanded-item ul {
+    margin-bottom: 0;
+}
+</style>
+
+
+
+
+<script>
+/*
+ * CAREERCOMPASS_FINAL_ORDER_CONTROLLER
+ *
+ * Organizes recommendation sections into a simple
+ * student-friendly journey without modifying the
+ * recommendation engines.
+ */
+
+(function() {
+
+    function getModuleHeading(module) {
+
+        const h2 = module.querySelector("h2");
+
+        if (h2) {
+            return h2.textContent
+                .replace(/\s+/g, " ")
+                .trim();
+        }
+
+        return "";
+    }
+
+
+    function organize(containerId, orderMap) {
+
+        const container =
+            document.getElementById(containerId);
+
+        if (!container) {
+            return;
+        }
+
+
+        const modules =
+            Array.from(container.children)
+                .filter(function(element) {
+
+                    return (
+                        element.classList.contains("recommendation-panel") ||
+                        element.classList.contains("recommendation-section") ||
+                        element.classList.contains("after10-learning-section")
+                    );
+
+                });
+
+
+        modules.sort(function(a, b) {
+
+            const aHeading =
+                getModuleHeading(a);
+
+            const bHeading =
+                getModuleHeading(b);
+
+            const aOrder =
+                orderMap[aHeading] !== undefined
+                    ? orderMap[aHeading]
+                    : 999;
+
+            const bOrder =
+                orderMap[bHeading] !== undefined
+                    ? orderMap[bHeading]
+                    : 999;
+
+            return aOrder - bOrder;
+        });
+
+
+        modules.forEach(function(module) {
+            container.appendChild(module);
+        });
+    }
+
+
+    function organizePage() {
+
+        /*
+         * AFTER 12TH
+         */
+        organize(
+            "after12-results",
+            {
+                "CareerCompass AI Recommendations": 10,
+                "Higher Education Guidance": 20,
+                "Competitive Exam Guidance": 30,
+                "Exam Preparation Guidance": 35,
+                "Skill Gap Analysis": 40,
+                "Your Personalized Learning Roadmap": 50,
+                "Your Career Roadmap": 60,
+                "Your Personalized Next Steps": 70,
+                "📚 Free Learning Resources": 80
+            }
+        );
+
+
+        /*
+         * AFTER 10TH
+         */
+        const after10 =
+            document.getElementById("after10-results");
+
+        const learning =
+            document.querySelector(
+                ".after10-learning-section"
+            );
+
+        /*
+         * Move After-10th learning resources into
+         * the After-10th results area.
+         */
+        if (
+            after10 &&
+            learning &&
+            !after10.contains(learning)
+        ) {
+            after10.appendChild(learning);
+        }
+
+
+        organize(
+            "after10-results",
+            {
+                "After 10th Career Recommendations": 10,
+                "Individual Career Recommendations": 20,
+                "Your Stream & Pathway Guidance": 30,
+                "Competitive Exam & Opportunity Guidance": 40,
+                "Your After 10th Career Roadmap": 50,
+                "After 10th Skill Development Guidance": 60,
+                "Your Personalized Next Steps": 70,
+                "After 10th Free Learning Resources": 80
+            }
+        );
+    }
+
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        organizePage
+    );
+
+})();
+</script>
+
+
+
+<style>
+/* CAREERCOMPASS_SECTION_LAYOUT_STYLE */
+
+.stage-results {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.stage-results > .recommendation-panel,
+.stage-results > .recommendation-section,
+.stage-results > .after10-learning-section {
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.stage-results-banner {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+}
+
+.career-details-accordion {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.career-details-expanded {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+    .stage-results > .recommendation-panel,
+    .stage-results > .recommendation-section,
+    .stage-results > .after10-learning-section {
+        width: 100%;
+    }
+}
+</style>

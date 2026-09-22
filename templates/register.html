@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Register - CareerCompass AI</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            CareerCompass AI
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/login">Login</a>
+
+        </div>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="tagline">
+                START YOUR JOURNEY
+            </div>
+
+            <h1>
+                Create Your
+                <span>Career Profile</span>
+            </h1>
+
+            <p class="description">
+                Create an account to receive personalized
+                career guidance, exam recommendations
+                and learning resources.
+            </p>
+
+
+            <form method="POST"
+                  style="max-width:450px;margin:auto;">
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                    style="width:100%;padding:15px;margin:8px 0;border-radius:10px;border:1px solid #ddd;"
+                >
+
+                <input
+                    type="text"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                    style="width:100%;padding:15px;margin:8px 0;border-radius:10px;border:1px solid #ddd;"
+                >
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    required
+                    style="width:100%;padding:15px;margin:8px 0;border-radius:10px;border:1px solid #ddd;"
+                >
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                    style="border:none;cursor:pointer;margin-top:15px;"
+                >
+                    Create Account
+                </button>
+
+            </form>
+
+            <p style="margin-top:25px;">
+
+                Already have an account?
+
+                <a href="/login">
+                    Login
+                </a>
+
+            </p>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

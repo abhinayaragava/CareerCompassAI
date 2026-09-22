@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Login - CareerCompass AI</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            CareerCompass AI
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/register">Register</a>
+
+        </div>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="tagline">
+                WELCOME BACK
+            </div>
+
+            <h1>
+                Continue Your
+                <span>Career Journey</span>
+            </h1>
+
+            <p class="description">
+                Login to access your personalized
+                CareerCompass AI dashboard.
+            </p>
+
+
+            <form method="POST"
+                  style="max-width:450px;margin:auto;">
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                    style="width:100%;padding:15px;margin:8px 0;border-radius:10px;border:1px solid #ddd;"
+                >
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    required
+                    style="width:100%;padding:15px;margin:8px 0;border-radius:10px;border:1px solid #ddd;"
+                >
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                    style="border:none;cursor:pointer;margin-top:15px;"
+                >
+                    Login
+                </button>
+
+            </form>
+
+
+            <p style="margin-top:25px;">
+
+                Don't have an account?
+
+                <a href="/register">
+                    Create one
+                </a>
+
+            </p>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

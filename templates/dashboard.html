@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - CareerCompass AI</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            CareerCompass AI
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/profile">Profile</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Dashboard -->
+    <main class="dashboard-page">
+
+        <section class="dashboard-header">
+
+            <p class="eyebrow">
+                YOUR PERSONAL CAREER SPACE
+            </p>
+
+            <h1>
+                Welcome, {{ session["user_name"] }}!
+            </h1>
+
+            <p>
+                Your personalized CareerCompass AI journey starts here.
+            </p>
+
+        </section>
+
+
+        <!-- Feature Cards -->
+        <section class="dashboard-grid">
+
+            <div class="dashboard-card">
+                <div class="card-icon">🎯</div>
+
+                <h2>Career Recommendations</h2>
+
+                <p>
+                    Discover career paths that match your interests,
+                    skills, education and goals.
+                </p>
+
+                <a href="#" class="card-button">
+                    Explore Careers
+                </a>
+            </div>
+
+
+            <div class="dashboard-card">
+                <div class="card-icon">📚</div>
+
+                <h2>Competitive Exams</h2>
+
+                <p>
+                    Find suitable competitive exams and understand
+                    their eligibility and preparation requirements.
+                </p>
+
+                <a href="#" class="card-button">
+                    Explore Exams
+                </a>
+            </div>
+
+
+            <div class="dashboard-card">
+                <div class="card-icon">🧠</div>
+
+                <h2>Skill Gap Analysis</h2>
+
+                <p>
+                    Identify the skills you already have and discover
+                    the skills you need to develop.
+                </p>
+
+                <a href="#" class="card-button">
+                    Analyze Skills
+                </a>
+            </div>
+
+
+            <div class="dashboard-card">
+                <div class="card-icon">📖</div>
+
+                <h2>Learning Resources</h2>
+
+                <p>
+                    Get free lectures, notes, previous-year papers
+                    and practice resources.
+                </p>
+
+                <a href="#" class="card-button">
+                    Find Resources
+                </a>
+            </div>
+
+
+            <div class="dashboard-card">
+                <div class="card-icon">📝</div>
+
+                <h2>Career Assessment</h2>
+
+                <p>
+                    Take a short assessment to help CareerCompass AI
+                    understand your interests and strengths.
+                </p>
+
+                <a href="#" class="card-button">
+                    Take Assessment
+                </a>
+            </div>
+
+
+            <div class="dashboard-card">
+                <div class="card-icon">📈</div>
+
+                <h2>Progress Tracking</h2>
+
+                <p>
+                    Track your preparation, assessments and learning
+                    progress in one place.
+                </p>
+
+                <a href="#" class="card-button">
+                    View Progress
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
