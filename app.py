@@ -111,7 +111,6 @@ def init_db():
             "PRAGMA table_info(profiles)"
         ).fetchall()
     ]
-
     twelfth_columns = {
         "twelfth_percentage": "TEXT",
         "twelfth_board": "TEXT",
@@ -122,8 +121,24 @@ def init_db():
         "career_direction": "TEXT",
         "twelfth_exam_interest": "TEXT",
         "problem_type": "TEXT",
-        "work_style": "TEXT"
+        "work_style": "TEXT",
+
+        "education_stage": "TEXT",
+        "graduation_degree": "TEXT",
+        "graduation_status": "TEXT",
+        "graduation_domain": "TEXT",
+        "graduation_goal": "TEXT",
+        "graduation_work_style": "TEXT",
+        "graduation_interests": "TEXT"
     }
+
+
+
+
+
+
+
+
 
     for column_name, column_type in twelfth_columns.items():
 
