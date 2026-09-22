@@ -1882,3 +1882,572 @@ body.stage-graduation #graduation-results {
     }
 
 }
+
+/* ========================================
+   HOMEPAGE MODERN HERO
+   ======================================== */
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 8%;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(167, 139, 250, 0.20), transparent 30%),
+        radial-gradient(circle at 85% 30%, rgba(96, 165, 250, 0.18), transparent 30%),
+        linear-gradient(135deg, #f8f7ff 0%, #eef5ff 100%);
+}
+
+.hero-content {
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.tagline {
+    display: inline-block;
+    padding: 9px 18px;
+    margin-bottom: 22px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #6d5bd0;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    box-shadow: 0 8px 25px rgba(70, 60, 120, 0.08);
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.08;
+    margin-bottom: 24px;
+    color: #202a44;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #6d5bd0;
+}
+
+.hero .description {
+    max-width: 720px;
+    margin: 0 auto 34px;
+    font-size: 18px;
+    line-height: 1.75;
+    color: #59657d;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 155px;
+    padding: 14px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.primary-button {
+    background: linear-gradient(135deg, #6d5bd0, #8b78e6);
+    color: white;
+    box-shadow: 0 10px 25px rgba(109, 91, 208, 0.25);
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(109, 91, 208, 0.32);
+}
+
+.secondary-button {
+    background: rgba(255, 255, 255, 0.9);
+    color: #4f46a5;
+    border: 1px solid #ddd9f7;
+}
+
+.secondary-button:hover {
+    transform: translateY(-3px);
+    background: white;
+    box-shadow: 0 10px 25px rgba(70, 60, 120, 0.10);
+}
+
+/* Homepage feature section */
+
+.features {
+    padding: 80px 8%;
+    background: #ffffff;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 34px;
+    color: #202a44;
+}
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    padding: 30px 24px;
+    border-radius: 18px;
+    background: #fafaff;
+    border: 1px solid #ece9fa;
+    box-shadow: 0 8px 25px rgba(50, 45, 100, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(50, 45, 100, 0.11);
+}
+
+.feature-card h3 {
+    margin-bottom: 14px;
+    color: #303b59;
+    font-size: 18px;
+}
+
+.feature-card p {
+    color: #68738a;
+    line-height: 1.65;
+}
+
+/* Mobile homepage */
+
+@media (max-width: 900px) {
+    .feature-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: auto;
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero .description {
+        font-size: 16px;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        padding: 60px 6%;
+    }
+}
+
+
+/* ========================================
+   MODERN DASHBOARD
+   ======================================== */
+
+.dashboard-page {
+    min-height: calc(100vh - 80px);
+    padding: 65px 8% 90px;
+    background:
+        radial-gradient(circle at 90% 10%, rgba(139, 120, 230, 0.12), transparent 28%),
+        linear-gradient(180deg, #f8f7ff 0%, #f3f7ff 100%);
+}
+
+.dashboard-header {
+    max-width: 1100px;
+    margin: 0 auto 45px;
+}
+
+.dashboard-header .eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #6d5bd0;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.dashboard-header h1 {
+    margin-bottom: 12px;
+    color: #202a44;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.15;
+}
+
+.dashboard-header > p:last-child {
+    color: #68738a;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.dashboard-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.dashboard-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 26px;
+    min-height: 310px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid #e9e6f7;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(55, 50, 100, 0.07);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-7px);
+    border-color: #d8d1f5;
+    box-shadow: 0 18px 40px rgba(55, 50, 100, 0.12);
+}
+
+.card-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    background: #f0edff;
+    font-size: 27px;
+}
+
+.dashboard-card h2 {
+    margin-bottom: 12px;
+    color: #303b59;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.dashboard-card p {
+    margin-bottom: 24px;
+    color: #68738a;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.card-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+    padding: 12px 18px;
+    border-radius: 11px;
+    background: #f4f1ff;
+    color: #5b4fc0;
+    border: 1px solid #e1dcfa;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.card-button:hover {
+    background: #6d5bd0;
+    color: white;
+    border-color: #6d5bd0;
+    transform: translateY(-2px);
+}
+
+/* Dashboard responsive layout */
+
+@media (max-width: 1000px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .dashboard-page {
+        padding: 50px 6% 70px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card {
+        min-height: 280px;
+    }
+}
+
+
+/* ========================================
+   MODERN PROFILE PAGE
+   ======================================== */
+
+.profile-container {
+    min-height: calc(100vh - 80px);
+    padding: 60px 7% 90px;
+    background:
+        radial-gradient(circle at 8% 8%, rgba(139, 120, 230, 0.10), transparent 25%),
+        radial-gradient(circle at 92% 25%, rgba(96, 165, 250, 0.10), transparent 25%),
+        linear-gradient(180deg, #f8f7ff 0%, #f3f7ff 100%);
+}
+
+.profile-intro {
+    max-width: 950px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.profile-badge {
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 9px 18px;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #6d5bd0;
+    border: 1px solid #e5e0f8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    box-shadow: 0 7px 20px rgba(60, 50, 110, 0.06);
+}
+
+.profile-intro h1 {
+    margin-bottom: 15px;
+    color: #202a44;
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.15;
+}
+
+.profile-intro > p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #68738a;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Profile sections */
+
+.profile-section {
+    max-width: 1100px;
+    margin: 0 auto 28px;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #e8e4f5;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(55, 50, 100, 0.06);
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.section-number {
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #f0edff;
+    color: #6d5bd0;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.section-heading h2 {
+    margin-bottom: 7px;
+    color: #303b59;
+    font-size: 23px;
+    line-height: 1.35;
+}
+
+.section-heading p {
+    color: #68738a;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Education stage cards */
+
+.stage-selection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.stage-card {
+    position: relative;
+    display: block;
+    padding: 26px 22px;
+    text-align: center;
+    border: 2px solid #ebe8f6;
+    border-radius: 18px;
+    background: #fafaff;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.stage-card:hover {
+    transform: translateY(-4px);
+    border-color: #cfc6f4;
+    box-shadow: 0 12px 28px rgba(60, 50, 110, 0.09);
+}
+
+.stage-card input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.stage-card:has(input:checked) {
+    border-color: #6d5bd0;
+    background: #f6f3ff;
+    box-shadow: 0 10px 28px rgba(109, 91, 208, 0.12);
+}
+
+.stage-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    border-radius: 17px;
+    background: #f0edff;
+    font-size: 28px;
+}
+
+.stage-card h3 {
+    margin-bottom: 8px;
+    color: #303b59;
+    font-size: 19px;
+}
+
+.stage-card p {
+    color: #68738a;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+/* Interest cards */
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.interest-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 12px;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #e8e4f5;
+    border-radius: 16px;
+    background: #fafaff;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-3px);
+    border-color: #d3caf5;
+    box-shadow: 0 9px 22px rgba(60, 50, 110, 0.07);
+}
+
+.interest-card input {
+    width: 18px;
+    height: 18px;
+    accent-color: #6d5bd0;
+}
+
+.interest-card span {
+    font-size: 25px;
+}
+
+.interest-card strong {
+    color: #303b59;
+    font-size: 16px;
+}
+
+.interest-card small {
+    grid-column: 2;
+    margin-top: 4px;
+    color: #747e92;
+    line-height: 1.5;
+}
+
+/* Profile mobile layout */
+
+@media (max-width: 800px) {
+    .profile-container {
+        padding: 45px 5% 70px;
+    }
+
+    .stage-selection {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-section {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .section-heading {
+        gap: 12px;
+    }
+
+    .section-number {
+        flex-basis: 42px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .section-heading h2 {
+        font-size: 19px;
+    }
+
+    .profile-intro > p {
+        font-size: 15px;
+    }
+}
+
