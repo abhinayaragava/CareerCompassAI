@@ -112,6 +112,8 @@ def init_db():
         ).fetchall()
     ]
     twelfth_columns = {
+        "tenth_percentage": "TEXT",
+        "tenth_board": "TEXT",
         "twelfth_percentage": "TEXT",
         "twelfth_board": "TEXT",
         "twelfth_stream": "TEXT",
