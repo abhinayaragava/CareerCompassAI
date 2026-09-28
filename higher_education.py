@@ -37,6 +37,20 @@ higher_education = {
             "BDS",
             "B.Pharm",
             "B.Sc. Nursing",
+            "Bachelor of Physiotherapy (BPT)",
+            "B.Sc. Medical Laboratory Technology",
+            "B.Sc. Radiology / Medical Imaging Technology",
+            "Bachelor of Occupational Therapy (BOT)",
+            "Bachelor of Optometry",
+            "B.Sc. Nutrition & Dietetics",
+            "Bachelor of Audiology and Speech-Language Pathology",
+            "B.Sc. Respiratory Therapy",
+            "Bachelor of Emergency Medical Services",
+            "Bachelor of Public Health",
+            "B.Sc. Clinical Psychology / Psychology",
+            "B.Sc. Genetics / Genetic Counseling-related programs",
+            "B.Sc. Medical Microbiology",
+            "B.Sc. Biotechnology",
             "Allied Health Sciences"
         ],
 
@@ -54,18 +68,49 @@ higher_education = {
             "Doctor",
             "Dentist",
             "Pharmacist",
+            "Physiotherapist",
+            "Healthcare Professional",
             "Nurse",
-            "Healthcare Professional"
+            "Medical Laboratory Technologist",
+            "Radiology / Medical Imaging Technologist",
+            "Occupational Therapist",
+            "Optometrist",
+            "Nutritionist / Dietitian",
+            "Speech & Language Therapist",
+            "Audiologist",
+            "Respiratory Therapist",
+            "Emergency Medical Professional",
+            "Public Health Professional",
+            "Clinical Psychologist",
+            "Genetic Counselor",
+            "Medical Microbiologist",
+            "Biotechnology Professional"
         ]
     },
 
     "Business & Finance": {
         "degrees": [
             "B.Com",
+            "B.Com Accounting & Finance",
+            "B.Com Banking & Finance",
+            "B.Com Financial Markets",
             "BBA",
+            "BBA Finance",
+            "BBA Marketing",
+            "BBA Human Resources",
+            "BBA International Business",
             "BMS",
+            "BMS Finance",
             "Bachelor of Economics",
-            "Finance-related undergraduate programs"
+            "B.Sc Economics",
+            "B.Sc Finance",
+            "B.Sc Statistics",
+            "Actuarial Science",
+            "Banking & Finance",
+            "Business Analytics",
+            "Financial Technology (FinTech)",
+            "Supply Chain Management",
+            "Operations Management"
         ],
 
         "eligibility": "Generally requires Class 12. Specific subject requirements vary by institution and course.",
@@ -76,15 +121,32 @@ higher_education = {
             "Mathematics",
             "Economics",
             "Accountancy",
-            "Business Studies"
+            "Business Studies",
+            "Statistics",
+            "Computer Science"
         ],
 
         "career_opportunities": [
+            "Chartered Accountant",
             "Financial Analyst",
-            "Accountant",
             "Business Analyst",
             "Investment Professional",
-            "Entrepreneur"
+            "Entrepreneur",
+            "Banking Professional",
+            "Investment Banker",
+            "Financial Planner / Advisor",
+            "Risk Analyst",
+            "Credit Analyst",
+            "Insurance Professional",
+            "Tax Consultant",
+            "Management Consultant",
+            "Marketing Professional",
+            "Human Resources Professional",
+            "Operations Manager",
+            "Supply Chain Professional",
+            "FinTech Professional",
+            "Economist",
+            "Business Development Professional"
         ]
     },
 

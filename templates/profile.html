@@ -2413,21 +2413,21 @@ document.addEventListener("keydown", function(event) {
                 </small>
 
                 <select name="skills" multiple size="6">
-                    <option value="Programming">💻 Programming</option>
-                    <option value="Problem Solving">🧩 Problem Solving</option>
-                    <option value="Mathematics">🔢 Mathematics</option>
-                    <option value="Data Analysis">📊 Data Analysis</option>
-                    <option value="Research">🔬 Research</option>
-                    <option value="Communication">🗣️ Communication</option>
-                    <option value="Empathy">💙 Empathy</option>
-                    <option value="Observation">👀 Observation</option>
-                    <option value="Human Behaviour">🧠 Human Behaviour</option>
-                    <option value="Counseling">🤝 Counseling</option>
-                    <option value="Active Listening">👂 Active Listening</option>
-                    <option value="Social Science">🌍 Social Science</option>
-                    <option value="Analytical Thinking">📈 Analytical Thinking</option>
-                    <option value="Critical Thinking">💡 Critical Thinking</option>
-                    <option value="Writing">✍️ Writing</option>
+                    <option value="Programming" {% if profile and profile['skills'] and 'Programming' in profile['skills'].split(', ') %}selected{% endif %}>💻 Programming</option>
+                    <option value="Problem Solving" {% if profile and profile['skills'] and 'Problem Solving' in profile['skills'].split(', ') %}selected{% endif %}>🧩 Problem Solving</option>
+                    <option value="Mathematics" {% if profile and profile['skills'] and 'Mathematics' in profile['skills'].split(', ') %}selected{% endif %}>🔢 Mathematics</option>
+                    <option value="Data Analysis" {% if profile and profile['skills'] and 'Data Analysis' in profile['skills'].split(', ') %}selected{% endif %}>📊 Data Analysis</option>
+                    <option value="Research" {% if profile and profile['skills'] and 'Research' in profile['skills'].split(', ') %}selected{% endif %}>🔬 Research</option>
+                    <option value="Communication" {% if profile and profile['skills'] and 'Communication' in profile['skills'].split(', ') %}selected{% endif %}>🗣️ Communication</option>
+                    <option value="Empathy" {% if profile and profile['skills'] and 'Empathy' in profile['skills'].split(', ') %}selected{% endif %}>💙 Empathy</option>
+                    <option value="Observation" {% if profile and profile['skills'] and 'Observation' in profile['skills'].split(', ') %}selected{% endif %}>👀 Observation</option>
+                    <option value="Human Behaviour" {% if profile and profile['skills'] and 'Human Behaviour' in profile['skills'].split(', ') %}selected{% endif %}>🧠 Human Behaviour</option>
+                    <option value="Counseling" {% if profile and profile['skills'] and 'Counseling' in profile['skills'].split(', ') %}selected{% endif %}>🤝 Counseling</option>
+                    <option value="Active Listening" {% if profile and profile['skills'] and 'Active Listening' in profile['skills'].split(', ') %}selected{% endif %}>👂 Active Listening</option>
+                    <option value="Social Science" {% if profile and profile['skills'] and 'Social Science' in profile['skills'].split(', ') %}selected{% endif %}>🌍 Social Science</option>
+                    <option value="Analytical Thinking" {% if profile and profile['skills'] and 'Analytical Thinking' in profile['skills'].split(', ') %}selected{% endif %}>📈 Analytical Thinking</option>
+                    <option value="Critical Thinking" {% if profile and profile['skills'] and 'Critical Thinking' in profile['skills'].split(', ') %}selected{% endif %}>💡 Critical Thinking</option>
+                    <option value="Writing" {% if profile and profile['skills'] and 'Writing' in profile['skills'].split(', ') %}selected{% endif %}>✍️ Writing</option>
                 </select>
 
             </div>
@@ -2545,51 +2545,51 @@ document.addEventListener("keydown", function(event) {
                         Select
                     </option>
 
-                    <option>
+                    <option value="numerical, logical, puzzles" {% if profile and profile['problem_type'] == 'numerical, logical, puzzles' %}selected{% endif %}>
                         🔢 Solving numerical and logical puzzles
                     </option>
 
-                    <option>
+                    <option value="coding, apps, websites, technology" {% if profile and profile['problem_type'] == 'coding, apps, websites, technology' %}selected{% endif %}>
                         💻 Building apps, websites or solving coding challenges
                     </option>
 
-                    <option>
+                    <option value="science, experiments, discovery" {% if profile and profile['problem_type'] == 'science, experiments, discovery' %}selected{% endif %}>
                         🔬 Understanding science through experiments and discovery
                     </option>
 
-                    <option>
+                    <option value="health, human body, helping people" {% if profile and profile['problem_type'] == 'health, human body, helping people' %}selected{% endif %}>
                         🧑‍⚕️ Understanding health, the human body and helping people
                     </option>
 
-                    <option>
+                    <option value="design, creative, visual" {% if profile and profile['problem_type'] == 'design, creative, visual' %}selected{% endif %}>
                         🎨 Creating designs, visuals and creative ideas
                     </option>
 
-                    <option>
+                    <option value="business, money, finance" {% if profile and profile['problem_type'] == 'business, money, finance' %}selected{% endif %}>
                         💰 Solving business, money and financial problems
                     </option>
 
-                    <option>
+                    <option value="rules, justice, legal" {% if profile and profile['problem_type'] == 'rules, justice, legal' %}selected{% endif %}>
                         ⚖️ Understanding rules, justice and legal situations
                     </option>
 
-                    <option>
+                    <option value="public, community, social" {% if profile and profile['problem_type'] == 'public, community, social' %}selected{% endif %}>
                         🏛️ Solving public and community problems
                     </option>
 
-                    <option>
+                    <option value="discipline, leadership, national service" {% if profile and profile['problem_type'] == 'discipline, leadership, national service' %}selected{% endif %}>
                         🪖 Challenges involving discipline, leadership and national service
                     </option>
 
-                    <option>
+                    <option value="environmental, agricultural, sustainability" {% if profile and profile['problem_type'] == 'environmental, agricultural, sustainability' %}selected{% endif %}>
                         🌱 Solving environmental, agricultural and sustainability problems
                     </option>
 
-                    <option>
+                    <option value="people, behaviour, emotions" {% if profile and profile['problem_type'] == 'people, behaviour, emotions' %}selected{% endif %}>
                         🧠 Understanding people's behaviour and emotions
                     </option>
 
-                    <option>
+                    <option value="teaching, explaining, learn" {% if profile and profile['problem_type'] == 'teaching, explaining, learn' %}selected{% endif %}>
                         📚 Explaining concepts and helping others learn
                     </option>
 
@@ -2615,47 +2615,47 @@ document.addEventListener("keydown", function(event) {
                         Select
                     </option>
 
-                    <option>
+                    <option value="computers, technology" {% if profile and profile['work_style'] == 'computers, technology' %}selected{% endif %}>
                         💻 I like working mainly with computers and technology
                     </option>
 
-                    <option>
+                    <option value="people, helping people" {% if profile and profile['work_style'] == 'people, helping people' %}selected{% endif %}>
                         👥 I enjoy interacting with and helping people
                     </option>
 
-                    <option>
+                    <option value="numbers, data, analysis" {% if profile and profile['work_style'] == 'numbers, data, analysis' %}selected{% endif %}>
                         📊 I prefer working with numbers, data and analysis
                     </option>
 
-                    <option>
+                    <option value="experiments, research" {% if profile and profile['work_style'] == 'experiments, research' %}selected{% endif %}>
                         🧪 I enjoy experiments, laboratories and research
                     </option>
 
-                    <option>
+                    <option value="creative, design" {% if profile and profile['work_style'] == 'creative, design' %}selected{% endif %}>
                         🎨 I prefer creative and design-oriented work
                     </option>
 
-                    <option>
+                    <option value="managing, leading" {% if profile and profile['work_style'] == 'managing, leading' %}selected{% endif %}>
                         🏢 I like organizing, managing and leading teams
                     </option>
 
-                    <option>
+                    <option value="outdoors, real-world" {% if profile and profile['work_style'] == 'outdoors, real-world' %}selected{% endif %}>
                         🌳 I enjoy working outdoors and in real-world environments
                     </option>
 
-                    <option>
+                    <option value="practical, hands-on" {% if profile and profile['work_style'] == 'practical, hands-on' %}selected{% endif %}>
                         🛠️ I prefer practical, hands-on work
                     </option>
 
-                    <option>
+                    <option value="speaking, writing, communicating" {% if profile and profile['work_style'] == 'speaking, writing, communicating' %}selected{% endif %}>
                         🗣️ I enjoy speaking, writing and communicating ideas
                     </option>
 
-                    <option>
+                    <option value="structured, rules, responsibilities" {% if profile and profile['work_style'] == 'structured, rules, responsibilities' %}selected{% endif %}>
                         🧭 I like structured work with clear rules and responsibilities
                     </option>
 
-                    <option>
+                    <option value="independent, creative" {% if profile and profile['work_style'] == 'independent, creative' %}selected{% endif %}>
                         🚀 I prefer independent work where I can explore my own ideas
                     </option>
 
@@ -3499,20 +3499,14 @@ document.addEventListener("keydown", function(event) {
                 </div>
 
                 <div>
-
-                    <h2>
-                        CareerCompass AI Recommendations
-                    </h2>
-
+                    <h2>CareerCompass AI Recommendations</h2>
                     <p>
-                        Based on your stream, strongest subjects,
-                        interests and skills.
+                        Careers matched using your stream, subjects,
+                        interests, skills and work preferences.
                     </p>
-
                 </div>
 
             </div>
-
 
             <div class="recommendation-grid">
 
@@ -3522,9 +3516,7 @@ document.addEventListener("keydown", function(event) {
 
                     <div class="recommendation-card-header">
 
-                        <h3>
-                            {{ recommendation.career }}
-                        </h3>
+                        <h3>{{ recommendation.career }}</h3>
 
                         <span class="recommendation-score">
                             {{ recommendation.score }}%
@@ -3532,24 +3524,53 @@ document.addEventListener("keydown", function(event) {
 
                     </div>
 
-
                     <p class="recommendation-domain">
                         {{ recommendation.domain }}
                     </p>
 
+                    {% if recommendation.why_match %}
+                    <div class="recommendation-detail">
+                        <strong>💡 Why This Career Matches You</strong>
+                        <p>{{ recommendation.why_match }}</p>
+                    </div>
+                    {% endif %}
 
                     <div class="recommendation-detail">
 
-                        <strong>
-                            🎓 Suggested Degrees
-                        </strong>
+                        <strong>📊 Career Match Breakdown</strong>
 
-                        <ul>
+                        <ul class="match-breakdown-list">
 
-                            {% for degree in recommendation.degrees %}
+                            {% set max_points = {
+                                "Career Interest": 25,
+                                "Subject Match": 20,
+                                "Problem Type": 15,
+                                "Work Style": 15,
+                                "Skills Match": 10,
+                                "Stream Match": 10,
+                                "Career Direction": 5
+                            } %}
+
+                            {% for category, points in recommendation.match_breakdown.items() %}
 
                             <li>
-                                {{ degree }}
+
+                                <div class="match-breakdown-label">
+                                    <span>{{ category }}</span>
+                                    <strong>
+                                        {{ points }}/{{ max_points[category] }}
+                                        ·
+                                        {{ (points / max_points[category] * 100) | round }}%
+                                    </strong>
+                                </div>
+
+                                <div class="match-progress">
+                                    <div
+                                        class="match-progress-fill"
+                                        style="width: {{ (points / max_points[category] * 100) | round }}%;">
+                                    </div>
+                                </div>
+
                             </li>
 
                             {% endfor %}
@@ -3558,165 +3579,78 @@ document.addEventListener("keydown", function(event) {
 
                     </div>
 
-
-
-
-                        <div class="recommendation-detail">
-
-                        <strong>
-                            💡 Why This Career Matches You
-                        </strong>
-
-                        <p>
-                            {{ recommendation.why_match }}
-                        </p>
-
-                    </div>
-                     
+                    {% if recommendation.skills %}
                     <div class="recommendation-detail">
 
-
-
-
-
-<strong>
-    📊 Career Match Breakdown
-</strong>
-
-<ul class="match-breakdown-list">
-
-
-{% set max_points = {
-    "Career Interest": 25,
-    "Subject Match": 20,
-    "Problem Type": 15,
-    "Work Style": 15,
-    "Skills Match": 10,
-    "Stream Match": 10,
-    "Career Direction": 5
-} %}
-
-
-    {% for category, points in recommendation.match_breakdown.items() %}
-
-    <li>
-        <div class="match-breakdown-label">
-            <span>{{ category }}</span>
-             <strong>{{ points }}/{{ max_points[category] }} · {{ (points / max_points[category] * 100) | round }}%</strong>
-        </div>
-
-        <div class="match-progress">
-            <div
-                class="match-progress-fill"
-                style="width: {{ (points / max_points[category] * 100) | round }}%;"
-            ></div>
-        </div>
-    </li>
-
-    {% endfor %}
-
-</ul>
-
-
-                    <div class="recommendation-detail">
-
-                        <strong>
-                            🛠️ Skills to Develop
-                        </strong>
+                        <strong>🛠️ Skills to Develop</strong>
 
                         <div class="skill-list">
 
                             {% for skill in recommendation.skills %}
-
                             <span class="skill-tag">
                                 {{ skill }}
                             </span>
-
                             {% endfor %}
 
                         </div>
 
                     </div>
-
-                    
-
-                    
-
-                    
+                    {% endif %}
 
                     <details class="career-details-accordion">
-    <summary>🔍 View Career Details</summary>
 
-    <div class="career-details-expanded">
+                        <summary>🔍 View Career Details</summary>
 
-        <div class="career-expanded-item">
-            <strong>📊 Match Score</strong>
-            <span>{{ recommendation.score }}%</span>
-        </div>
+                        <div class="career-details-expanded">
 
-        {% if recommendation.why_match %}
-        <div class="career-expanded-item">
-            <strong>💡 Why This Career Matches You</strong>
-            <p>{{ recommendation.why_match }}</p>
-        </div>
-        {% endif %}
+                            {% if recommendation.related_subjects %}
+                            <div class="career-expanded-item">
+                                <strong>📚 Relevant Subjects</strong>
+                                <p>
+                                    {{ recommendation.related_subjects | join(", ") }}
+                                </p>
+                            </div>
+                            {% endif %}
 
-        {% if recommendation.related_subjects %}
-        <div class="career-expanded-item">
-            <strong>📚 Relevant Subjects</strong>
-            <p>{{ recommendation.related_subjects | join(", ") }}</p>
-        </div>
-        {% endif %}
+                            {% if recommendation.degrees %}
+                            <div class="career-expanded-item">
+                                <strong>🎓 Suggested Degrees</strong>
+                                <ul>
+                                    {% for degree in recommendation.degrees %}
+                                    <li>{{ degree }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endif %}
 
-        {% if recommendation.degrees %}
-        <div class="career-expanded-item">
-            <strong>🎓 Suggested Degrees</strong>
-            <ul>
-                {% for degree in recommendation.degrees %}
-                <li>{{ degree }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
+                            {% if recommendation.education_path %}
+                            <div class="career-expanded-item">
+                                <strong>🧭 Education Path</strong>
+                                <p>{{ recommendation.education_path }}</p>
+                            </div>
+                            {% endif %}
 
-        {% if recommendation.education_path %}
-        <div class="career-expanded-item">
-            <strong>🧭 Education Path</strong>
-            <p>{{ recommendation.education_path }}</p>
-        </div>
-        {% endif %}
+                            {% if recommendation.beginner_action %}
+                            <div class="career-expanded-item">
+                                <strong>🚀 Beginner Action</strong>
+                                <p>{{ recommendation.beginner_action }}</p>
+                            </div>
+                            {% endif %}
 
-        {% if recommendation.skills %}
-        <div class="career-expanded-item">
-            <strong>🛠️ Skills to Develop</strong>
-            <ul>
-                {% for skill in recommendation.skills %}
-                <li>{{ skill }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
+                            {% if recommendation.opportunities %}
+                            <div class="career-expanded-item">
+                                <strong>💼 Opportunities to Explore</strong>
+                                <ul>
+                                    {% for opportunity in recommendation.opportunities %}
+                                    <li>{{ opportunity }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endif %}
 
-        {% if recommendation.beginner_action %}
-        <div class="career-expanded-item">
-            <strong>🚀 Beginner Action</strong>
-            <p>{{ recommendation.beginner_action }}</p>
-        </div>
-        {% endif %}
+                        </div>
 
-        {% if recommendation.opportunities %}
-        <div class="career-expanded-item">
-            <strong>💼 Opportunities to Explore</strong>
-            <ul>
-                {% for opportunity in recommendation.opportunities %}
-                <li>{{ opportunity }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
-
-    </div>
-</details>
+                    </details>
 
                 </div>
 
@@ -3724,122 +3658,13 @@ document.addEventListener("keydown", function(event) {
 
             </div>
 
-            {% for recommendation in after12th_recommendations %}
-
-            <div
-                id="after12CareerModal{{ loop.index }}"
-                class="career-modal"
-                aria-hidden="true">
-
-                <div
-                    class="career-modal-overlay"
-                    onclick="closeCareerModal('after12CareerModal{{ loop.index }}')">
-                </div>
-
-                <div
-                    class="career-modal-content"
-                    role="dialog"
-                    aria-modal="true"
-                    aria-labelledby="after12CareerModalTitle{{ loop.index }}">
-
-                    <button
-                        type="button"
-                        class="career-modal-close"
-                        onclick="closeCareerModal('after12CareerModal{{ loop.index }}')"
-                        aria-label="Close career details">
-                        ×
-                    </button>
-
-                    <div class="career-modal-heading">
-                        <div class="career-modal-icon">🎯</div>
-                        <div>
-                            <h2 id="after12CareerModalTitle{{ loop.index }}">
-                                {{ recommendation.career }}
-                            </h2>
-                            <p>{{ recommendation.domain }}</p>
-                        </div>
-                    </div>
-
-                    <div class="career-modal-section">
-                        <h3>📊 Match Score</h3>
-                        <div class="career-modal-score">
-                            {{ recommendation.score }}%
-                        </div>
-                    </div>
-
-                    {% if recommendation.why_match %}
-                    <div class="career-modal-section">
-                        <h3>💡 Why This Career Matches You</h3>
-                        <p>{{ recommendation.why_match }}</p>
-                    </div>
-                    {% endif %}
-
-                    {% if recommendation.related_subjects %}
-                    <div class="career-modal-section">
-                        <h3>📚 Relevant Subjects</h3>
-                        <p>{{ recommendation.related_subjects | join(", ") }}</p>
-                    </div>
-                    {% endif %}
-
-                    {% if recommendation.degrees %}
-                    <div class="career-modal-section">
-                        <h3>🎓 Suggested Degrees</h3>
-                        <ul>
-                            {% for degree in recommendation.degrees %}
-                            <li>{{ degree }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    {% endif %}
-
-                    {% if recommendation.education_path %}
-                    <div class="career-modal-section">
-                        <h3>🧭 Education Path</h3>
-                        <p>{{ recommendation.education_path }}</p>
-                    </div>
-                    {% endif %}
-
-                    {% if recommendation.skills %}
-                    <div class="career-modal-section">
-                        <h3>🛠️ Skills to Develop</h3>
-                        <ul>
-                            {% for skill in recommendation.skills %}
-                            <li>{{ skill }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    {% endif %}
-
-                    {% if recommendation.beginner_action %}
-                    <div class="career-modal-section">
-                        <h3>🚀 Beginner Action</h3>
-                        <p>{{ recommendation.beginner_action }}</p>
-                    </div>
-                    {% endif %}
-
-                    {% if recommendation.opportunities %}
-                    <div class="career-modal-section">
-                        <h3>💼 Opportunities to Explore</h3>
-                        <ul>
-                            {% for opportunity in recommendation.opportunities %}
-                            <li>{{ opportunity }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    {% endif %}
-
-                </div>
-            </div>
-
-            {% endfor %}
-
         </div>
 
-    
-  {% endif %}
+        {% endif %}
 
 
 <!-- ======================================
+     AFTER 12TH PERSONALIZED LEARNING ROADMAP<!-- ======================================
      AFTER 12TH PERSONALIZED LEARNING ROADMAP
      ====================================== -->
 
@@ -3993,7 +3818,7 @@ document.addEventListener("keydown", function(event) {
 
 {% if profile and profile['education_stage'] == 'after_12th' and after12th_higher_education %}
 
-<div class="recommendation-panel">
+<div class="recommendation-panel higher-education-panel">
 
     <div class="section-heading">
 
@@ -4007,44 +3832,43 @@ document.addEventListener("keydown", function(event) {
             </h2>
 
             <p>
-                Degree and higher education options related to your
+                Explore undergraduate degree options connected to your
                 selected career domain.
             </p>
         </div>
 
     </div>
 
-    <div class="recommendation-grid">
+    <div class="higher-education-grid">
 
         {% for degree in after12th_higher_education %}
 
-        <div class="recommendation-card">
+        <div class="higher-education-card">
 
-            <div class="recommendation-card-header">
+            <div class="higher-education-icon">
+                🎓
+            </div>
+
+            <div class="higher-education-content">
 
                 <h3>
                     {{ degree }}
                 </h3>
 
-                <span class="recommendation-score">
+                <span class="higher-education-badge">
                     After 12th
                 </span>
 
-            </div>
-
-            <p class="recommendation-domain">
-                Higher Education Option
-            </p>
-
-            <div class="recommendation-detail">
-
-                <strong>🎓 Education Path</strong>
-
                 <p>
-                    This undergraduate education option can support
-                    further study and career development in your
-                    selected domain.
+                    This undergraduate degree can help you build
+                    academic knowledge and career-ready skills in
+                    your selected domain.
                 </p>
+
+                <div class="higher-education-footer">
+                    <span>📚 Undergraduate Degree</span>
+                    <span>🚀 Career Pathway</span>
+                </div>
 
             </div>
 
@@ -4057,7 +3881,6 @@ document.addEventListener("keydown", function(event) {
 </div>
 
 {% endif %}
-
 
 
 <!-- ======================================
@@ -4968,6 +4791,7 @@ function saveProfile() {
      */
 
     console.log("problem_type:", formData.get("problem_type"));
+    console.log("strongest_subjects:", formData.getAll("strongest_subjects")); console.log("career_direction:", formData.get("career_direction"));
     console.log("work_style:", formData.get("work_style"));
     console.log("skills:", formData.getAll("skills"));
     console.log("education_stage:", formData.get("education_stage"));
@@ -5737,6 +5561,97 @@ document.addEventListener("DOMContentLoaded", function () {
     .stage-results > .recommendation-section,
     .stage-results > .after10-learning-section {
         width: 100%;
+    }
+}
+</style>
+
+<style>
+/* ==========================================
+   AFTER 12TH HIGHER EDUCATION UI
+   ========================================== */
+
+.higher-education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.higher-education-card {
+    display: flex;
+    gap: 18px;
+    padding: 22px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #ffffff, #f7f8ff);
+    border: 1px solid rgba(100, 100, 180, 0.12);
+    box-shadow: 0 8px 24px rgba(50, 50, 100, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.higher-education-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(50, 50, 100, 0.14);
+}
+
+.higher-education-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef0ff;
+    font-size: 25px;
+}
+
+.higher-education-content {
+    flex: 1;
+}
+
+.higher-education-content h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    line-height: 1.35;
+}
+
+.higher-education-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #eee9ff;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.higher-education-content p {
+    margin: 4px 0 15px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.higher-education-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.higher-education-footer span {
+    padding: 6px 9px;
+    border-radius: 10px;
+    background: #f1f3f8;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+@media (max-width: 650px) {
+    .higher-education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .higher-education-card {
+        padding: 18px;
     }
 }
 </style>

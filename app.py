@@ -580,7 +580,6 @@ WHERE user_id = ?
         (session["user_id"],)
     ).fetchone()
 
-    print("DEBUG PROFILE STAGE:", student_profile["education_stage"] if student_profile else "NO PROFILE")
 
 
 

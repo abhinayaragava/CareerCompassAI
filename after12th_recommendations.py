@@ -12,7 +12,27 @@ AFTER_12TH_CAREER_DOMAINS = {
             "AI / Machine Learning Engineer",
             "Data Scientist",
             "Cybersecurity Analyst",
-            "Cloud / DevOps Engineer"
+            "Cloud / DevOps Engineer",
+            "Full Stack Developer",
+            "Mobile App Developer",
+            "Web Developer",
+            "Data Analyst",
+            "Business Intelligence Analyst",
+            "Database Administrator",
+            "Network Engineer",
+            "Cybersecurity Engineer",
+            "Ethical Hacker / Penetration Tester",
+            "Cloud Engineer",
+            "DevOps Engineer",
+            "Blockchain Developer",
+            "Robotics Engineer",
+            "IoT Engineer",
+            "Game Developer",
+            "UI / UX Technology Specialist",
+            "Software Tester / QA Engineer",
+            "Systems Analyst",
+            "IT Support / Systems Administrator",
+            "Technical Product Manager"
         ],
         "degrees": [
             "B.Tech / B.E. Computer Science",
@@ -38,7 +58,21 @@ AFTER_12TH_CAREER_DOMAINS = {
             "Electrical Engineer",
             "Electronics Engineer",
             "Computer Science Engineer",
-            "Chemical Engineer"
+            "Chemical Engineer",
+            "Aerospace Engineer",
+            "Automobile Engineer",
+            "Biomedical Engineer",
+            "Environmental Engineer",
+            "Industrial Engineer",
+            "Mechatronics Engineer",
+            "Robotics Engineer",
+            "Manufacturing Engineer",
+            "Petroleum Engineer",
+            "Mining Engineer",
+            "Metallurgical Engineer",
+            "Marine Engineer",
+            "Agricultural Engineer",
+            "Instrumentation & Control Engineer"
         ],
         "degrees": [
             "B.Tech / B.E.",
@@ -60,7 +94,22 @@ AFTER_12TH_CAREER_DOMAINS = {
             "Dentist",
             "Pharmacist",
             "Physiotherapist",
-            "Healthcare Professional"
+            "Healthcare Professional",
+            "Nurse",
+            "Medical Laboratory Technologist",
+            "Radiology / Medical Imaging Technologist",
+            "Occupational Therapist",
+            "Optometrist",
+            "Nutritionist / Dietitian",
+            "Speech & Language Therapist",
+            "Audiologist",
+            "Respiratory Therapist",
+            "Emergency Medical Professional",
+            "Public Health Professional",
+            "Clinical Psychologist",
+            "Genetic Counselor",
+            "Medical Microbiologist",
+            "Biotechnology Professional"
         ],
         "degrees": [
             "MBBS",
@@ -84,7 +133,22 @@ AFTER_12TH_CAREER_DOMAINS = {
             "Financial Analyst",
             "Business Analyst",
             "Investment Professional",
-            "Entrepreneur"
+            "Entrepreneur",
+            "Banking Professional",
+            "Investment Banker",
+            "Financial Planner / Advisor",
+            "Risk Analyst",
+            "Credit Analyst",
+            "Insurance Professional",
+            "Tax Consultant",
+            "Management Consultant",
+            "Marketing Professional",
+            "Human Resources Professional",
+            "Operations Manager",
+            "Supply Chain Professional",
+            "FinTech Professional",
+            "Economist",
+            "Business Development Professional"
         ],
         "degrees": {
             "Chartered Accountant": [
@@ -119,6 +183,96 @@ AFTER_12TH_CAREER_DOMAINS = {
                 "B.Com",
                 "Entrepreneurship",
                 "Economics"
+            ],
+            "Banking Professional": [
+                "B.Com",
+                "BBA",
+                "B.Sc Economics",
+                "Banking & Finance"
+            ],
+            "Investment Banker": [
+                "B.Com",
+                "BBA Finance",
+                "B.Sc Economics",
+                "BMS"
+            ],
+            "Financial Planner / Advisor": [
+                "B.Com",
+                "BBA Finance",
+                "B.Sc Finance",
+                "Economics"
+            ],
+            "Risk Analyst": [
+                "B.Com",
+                "BBA Finance",
+                "B.Sc Economics",
+                "B.Sc Statistics"
+            ],
+            "Credit Analyst": [
+                "B.Com",
+                "BBA Finance",
+                "B.Sc Economics",
+                "B.Sc Statistics"
+            ],
+            "Insurance Professional": [
+                "B.Com",
+                "BBA",
+                "B.Sc Economics",
+                "Actuarial Science"
+            ],
+            "Tax Consultant": [
+                "B.Com",
+                "B.Com Accounting & Finance",
+                "Economics",
+                "Taxation"
+            ],
+            "Management Consultant": [
+                "BBA",
+                "BMS",
+                "B.Com",
+                "Economics"
+            ],
+            "Marketing Professional": [
+                "BBA Marketing",
+                "BBA",
+                "B.Com",
+                "Mass Communication"
+            ],
+            "Human Resources Professional": [
+                "BBA Human Resources",
+                "BBA",
+                "BMS",
+                "Psychology"
+            ],
+            "Operations Manager": [
+                "BBA",
+                "BMS",
+                "B.Com",
+                "Operations Management"
+            ],
+            "Supply Chain Professional": [
+                "BBA",
+                "B.Com",
+                "BMS",
+                "Supply Chain Management"
+            ],
+            "FinTech Professional": [
+                "B.Com",
+                "BBA Finance",
+                "B.Sc Finance",
+                "Computer Science / IT"
+            ],
+            "Economist": [
+                "B.A. Economics",
+                "B.Sc Economics",
+                "B.Com",
+                "Mathematics"
+            ],
+            "Business Development Professional": [
+                "BBA",
+                "B.Com",
+                "BMS",
+                "Marketing"
             ]
         },
         "skills": [
@@ -181,7 +335,26 @@ AFTER_12TH_CAREER_DOMAINS = {
             "Army Officer",
             "Navy Officer",
             "Air Force Officer",
-            "Defence Technical Professional"
+            "Defence Technical Professional",
+            "Army Technical Officer",
+            "Army Engineering Officer",
+            "Army Signals / Communications Officer",
+            "Army Logistics Officer",
+            "Naval Engineering Officer",
+            "Naval Electrical / Electronics Officer",
+            "Naval Technical Officer",
+            "Naval Aviation Officer",
+            "Air Force Flying Officer",
+            "Air Force Technical Officer",
+            "Air Force Ground Duty Technical Officer",
+            "Air Force Ground Duty Non-Technical Officer",
+            "Coast Guard Officer",
+            "Defence Scientist",
+            "Defence Research & Technology Professional",
+            "Defence Cybersecurity Professional",
+            "Defence Electronics / Communications Professional",
+            "Defence Logistics Professional",
+            "Defence Medical Professional"
         ],
         "degrees": [
             "B.Tech / B.E.",
@@ -779,6 +952,120 @@ def recommend_after12th_careers(
             "physics"
         ],
 
+        "Full Stack Developer": [
+            "computer science",
+            "mathematics"
+        ],
+
+        "Mobile App Developer": [
+            "computer science",
+            "mathematics"
+        ],
+
+        "Web Developer": [
+            "computer science",
+            "mathematics"
+        ],
+
+        "Data Analyst": [
+            "mathematics",
+            "computer science",
+            "economics"
+        ],
+
+        "Business Intelligence Analyst": [
+            "mathematics",
+            "computer science",
+            "economics",
+            "business studies"
+        ],
+
+        "Database Administrator": [
+            "computer science",
+            "mathematics"
+        ],
+
+        "Network Engineer": [
+            "computer science",
+            "mathematics",
+            "physics"
+        ],
+
+        "Cybersecurity Engineer": [
+            "computer science",
+            "mathematics",
+            "physics"
+        ],
+
+        "Ethical Hacker / Penetration Tester": [
+            "computer science",
+            "mathematics",
+            "physics"
+        ],
+
+        "Cloud Engineer": [
+            "computer science",
+            "mathematics",
+            "physics"
+        ],
+
+        "DevOps Engineer": [
+            "computer science",
+            "mathematics",
+            "physics"
+        ],
+
+        "Blockchain Developer": [
+            "computer science",
+            "mathematics"
+        ],
+
+        "Robotics Engineer": [
+            "mathematics",
+            "physics",
+            "computer science"
+        ],
+
+        "IoT Engineer": [
+            "mathematics",
+            "physics",
+            "computer science"
+        ],
+
+        "Game Developer": [
+            "computer science",
+            "mathematics",
+            "physics"
+        ],
+
+        "UI / UX Technology Specialist": [
+            "computer science",
+            "design",
+            "computer fundamentals"
+        ],
+
+        "Software Tester / QA Engineer": [
+            "computer science",
+            "mathematics"
+        ],
+
+        "Systems Analyst": [
+            "computer science",
+            "mathematics",
+            "business studies"
+        ],
+
+        "IT Support / Systems Administrator": [
+            "computer science",
+            "physics"
+        ],
+
+        "Technical Product Manager": [
+            "computer science",
+            "mathematics",
+            "business studies"
+        ],
+
         "Computer Science Engineer": [
             "programming",
             "problem solving",
@@ -821,6 +1108,92 @@ def recommend_after12th_careers(
             "chemistry"
         ],
 
+        "Aerospace Engineer": [
+            "mathematics",
+            "physics",
+            "chemistry"
+        ],
+
+        "Automobile Engineer": [
+            "mathematics",
+            "physics",
+            "chemistry"
+        ],
+
+        "Biomedical Engineer": [
+            "mathematics",
+            "physics",
+            "biology"
+        ],
+
+        "Environmental Engineer": [
+            "mathematics",
+            "physics",
+            "chemistry",
+            "biology"
+        ],
+
+        "Industrial Engineer": [
+            "mathematics",
+            "physics",
+            "economics",
+            "business studies"
+        ],
+
+        "Mechatronics Engineer": [
+            "mathematics",
+            "physics",
+            "computer science"
+        ],
+
+        "Robotics Engineer": [
+            "mathematics",
+            "physics",
+            "computer science"
+        ],
+
+        "Manufacturing Engineer": [
+            "mathematics",
+            "physics",
+            "chemistry"
+        ],
+
+        "Petroleum Engineer": [
+            "mathematics",
+            "physics",
+            "chemistry"
+        ],
+
+        "Mining Engineer": [
+            "mathematics",
+            "physics",
+            "chemistry"
+        ],
+
+        "Metallurgical Engineer": [
+            "mathematics",
+            "physics",
+            "chemistry"
+        ],
+
+        "Marine Engineer": [
+            "mathematics",
+            "physics",
+            "chemistry"
+        ],
+
+        "Agricultural Engineer": [
+            "mathematics",
+            "physics",
+            "biology"
+        ],
+
+        "Instrumentation & Control Engineer": [
+            "mathematics",
+            "physics",
+            "computer science"
+        ],
+
         "Doctor": [
             "biology",
             "chemistry",
@@ -840,6 +1213,115 @@ def recommend_after12th_careers(
         "Physiotherapist": [
             "biology",
             "physics"
+        ],
+
+        "Healthcare Professional": [
+            "biology",
+            "chemistry",
+            "physics"
+        ],
+
+        "Nurse": [
+            "biology",
+            "chemistry"
+        ],
+
+        "Medical Laboratory Technologist": [
+            "biology",
+            "chemistry"
+        ],
+
+        "Radiology / Medical Imaging Technologist": [
+            "physics",
+            "biology"
+        ],
+
+        "Occupational Therapist": [
+            "biology",
+            "physics"
+        ],
+
+        "Optometrist": [
+            "biology",
+            "physics"
+        ],
+
+        "Nutritionist / Dietitian": [
+            "biology",
+            "chemistry"
+        ],
+
+        "Speech & Language Therapist": [
+            "biology",
+            "psychology"
+        ],
+
+        "Audiologist": [
+            "biology",
+            "physics"
+        ],
+
+        "Respiratory Therapist": [
+            "biology",
+            "physics"
+        ],
+
+        "Emergency Medical Professional": [
+            "biology",
+            "chemistry"
+        ],
+
+        "Public Health Professional": [
+            "biology",
+            "chemistry",
+            "statistics"
+        ],
+
+        "Clinical Psychologist": [
+            "biology",
+            "psychology"
+        ],
+
+        "Genetic Counselor": [
+            "biology",
+            "chemistry"
+        ],
+
+        "Medical Microbiologist": [
+            "biology",
+            "chemistry"
+        ],
+
+        "Biotechnology Professional": [
+            "biology",
+            "chemistry",
+            "physics"
+        ],
+
+        "Research Scientist": [
+            "biology",
+            "chemistry",
+            "physics",
+            "mathematics"
+        ],
+
+        "Scientific Researcher": [
+            "biology",
+            "chemistry",
+            "physics",
+            "mathematics"
+        ],
+
+        "Laboratory Professional": [
+            "biology",
+            "chemistry",
+            "physics"
+        ],
+
+        "Research Analyst": [
+            "mathematics",
+            "computer science",
+            "economics"
         ],
 
         "Chartered Accountant": [
@@ -870,6 +1352,153 @@ def recommend_after12th_careers(
             "business studies",
             "economics",
             "accountancy"
+        ],
+
+        "Banking Professional": [
+            "accountancy",
+            "economics",
+            "mathematics"
+        ],
+
+        "Investment Banker": [
+            "mathematics",
+            "economics",
+            "accountancy"
+        ],
+
+        "Financial Planner / Advisor": [
+            "mathematics",
+            "economics",
+            "accountancy"
+        ],
+
+        "Risk Analyst": [
+            "mathematics",
+            "economics",
+            "statistics"
+        ],
+
+        "Credit Analyst": [
+            "accountancy",
+            "economics",
+            "mathematics"
+        ],
+
+        "Insurance Professional": [
+            "mathematics",
+            "economics",
+            "accountancy"
+        ],
+
+        "Tax Consultant": [
+            "accountancy",
+            "economics",
+            "business studies"
+        ],
+
+        "Management Consultant": [
+            "business studies",
+            "economics",
+            "mathematics"
+        ],
+
+        "Marketing Professional": [
+            "business studies",
+            "economics",
+            "psychology"
+        ],
+
+        "Human Resources Professional": [
+            "business studies",
+            "psychology",
+            "economics"
+        ],
+
+        "Operations Manager": [
+            "business studies",
+            "mathematics",
+            "economics"
+        ],
+
+        "Supply Chain Professional": [
+            "business studies",
+            "economics",
+            "mathematics"
+        ],
+
+        "FinTech Professional": [
+            "mathematics",
+            "computer science",
+            "economics"
+        ],
+
+        "Economist": [
+            "economics",
+            "mathematics",
+            "statistics"
+        ],
+
+        "Business Development Professional": [
+            "business studies",
+            "economics",
+            "communication"
+        ],
+
+        "Agricultural Scientist": [
+            "biology",
+            "chemistry",
+            "mathematics"
+        ],
+
+        "Agriculture Officer": [
+            "biology",
+            "chemistry",
+            "mathematics"
+        ],
+
+        "Environmental Professional": [
+            "biology",
+            "chemistry",
+            "physics"
+        ],
+
+        "Food Technology Professional": [
+            "biology",
+            "chemistry",
+            "mathematics"
+        ],
+
+        "Journalist": [
+            "english",
+            "history",
+            "political science",
+            "writing"
+        ],
+
+        "Content Creator": [
+            "english",
+            "communication",
+            "writing",
+            "computer science"
+        ],
+
+        "Media Professional": [
+            "english",
+            "communication",
+            "writing"
+        ],
+
+        "Public Relations Professional": [
+            "english",
+            "communication",
+            "business studies"
+        ],
+
+        "Communication Specialist": [
+            "english",
+            "communication",
+            "writing",
+            "psychology"
         ],
 
         "Lawyer": [
@@ -924,6 +1553,150 @@ def recommend_after12th_careers(
             "political science",
             "economics",
             "history"
+        ],
+
+        "Teacher": [
+            "mathematics",
+            "physics",
+            "chemistry",
+            "biology",
+            "history",
+            "english",
+            "psychology"
+        ],
+
+        "Education Professional": [
+            "english",
+            "psychology",
+            "sociology",
+            "history"
+        ],
+
+        "Academic Counselor": [
+            "psychology",
+            "sociology",
+            "english"
+        ],
+
+        "Education Content Developer": [
+            "english",
+            "psychology",
+            "computer science",
+            "mathematics"
+        ],
+
+        "Army Technical Officer": [
+            "mathematics",
+            "physics",
+            "computer science"
+        ],
+
+        "Army Engineering Officer": [
+            "mathematics",
+            "physics",
+            "chemistry"
+        ],
+
+        "Army Signals / Communications Officer": [
+            "mathematics",
+            "physics",
+            "computer science"
+        ],
+
+        "Army Logistics Officer": [
+            "mathematics",
+            "economics",
+            "business studies"
+        ],
+
+        "Naval Engineering Officer": [
+            "mathematics",
+            "physics",
+            "chemistry"
+        ],
+
+        "Naval Electrical / Electronics Officer": [
+            "mathematics",
+            "physics",
+            "computer science"
+        ],
+
+        "Naval Technical Officer": [
+            "mathematics",
+            "physics",
+            "computer science"
+        ],
+
+        "Naval Aviation Officer": [
+            "mathematics",
+            "physics"
+        ],
+
+        "Air Force Flying Officer": [
+            "mathematics",
+            "physics"
+        ],
+
+        "Air Force Technical Officer": [
+            "mathematics",
+            "physics",
+            "computer science"
+        ],
+
+        "Air Force Ground Duty Technical Officer": [
+            "mathematics",
+            "physics",
+            "computer science"
+        ],
+
+        "Air Force Ground Duty Non-Technical Officer": [
+            "english",
+            "economics",
+            "history",
+            "political science"
+        ],
+
+        "Coast Guard Officer": [
+            "mathematics",
+            "physics",
+            "chemistry"
+        ],
+
+        "Defence Scientist": [
+            "mathematics",
+            "physics",
+            "chemistry",
+            "computer science"
+        ],
+
+        "Defence Research & Technology Professional": [
+            "mathematics",
+            "physics",
+            "computer science"
+        ],
+
+        "Defence Cybersecurity Professional": [
+            "computer science",
+            "mathematics",
+            "physics"
+        ],
+
+        "Defence Electronics / Communications Professional": [
+            "mathematics",
+            "physics",
+            "computer science"
+        ],
+
+        "Defence Logistics Professional": [
+            "mathematics",
+            "economics",
+            "business studies"
+        ],
+
+        "Defence Medical Professional": [
+            "biology",
+            "chemistry",
+            "physics"
         ]
     }
 
@@ -1018,6 +1791,10 @@ def recommend_after12th_careers(
             "business & finance"
         ],
 
+        "Defence": [
+            "defence"
+        ],
+
         "Law": [
             "law"
         ],
@@ -1031,12 +1808,17 @@ def recommend_after12th_careers(
             "research & science",
             "technology & ai",
             "medicine & healthcare",
-            "agriculture & environment"
+            "agriculture & environment",
+            "psychology & social sciences"
         ],
 
         "Design & Media": [
             "design & architecture",
             "media & communication"
+        ],
+
+        "Education": [
+            "education"
         ]
     }
 
@@ -1059,6 +1841,44 @@ def recommend_after12th_careers(
             "Government & Public Service"
         ]
     }
+    # Handle "Not Sure / Help Me Decide" by evaluating all career domains
+    # using the existing recommendation engine.
+    if career_domain.strip().lower() in {
+        "not sure",
+        "not sure / help me decide",
+        "help me decide"
+    }:
+        all_recommendations = []
+
+        for domain in AFTER_12TH_CAREER_DOMAINS:
+            domain_recommendations = recommend_after12th_careers(
+                stream,
+                ", ".join(strongest_subjects),
+                domain,
+                career_direction,
+                skills,
+                problem_type,
+                work_style
+            )
+
+            # Remove the automatic +25 domain-interest points because
+            # the student selected "Not Sure".
+            for recommendation in domain_recommendations:
+                recommendation["score"] = max(
+                    0,
+                    recommendation["score"] - 25
+                )
+                recommendation["match_breakdown"]["Career Interest"] = 0
+
+            all_recommendations.extend(domain_recommendations)
+
+        all_recommendations.sort(
+            key=lambda item: item["score"],
+            reverse=True
+        )
+
+        return all_recommendations
+
     # If a specific domain was selected
     if career_domain in AFTER_12TH_CAREER_DOMAINS:
 
@@ -1174,7 +1994,12 @@ def recommend_after12th_careers(
                 "Defence": [
                     "discipline",
                     "leadership",
-                    "national service"
+                    "national service",
+                    "security",
+                    "national security",
+                    "strategic",
+                    "defence",
+                    "military"
                 ],
                 "Research & Science": [
                     "science",
@@ -1281,7 +2106,12 @@ def recommend_after12th_careers(
                 "Law": [
                     "rules",
                     "speaking",
-                    "writing"
+                    "writing",
+                    "communication",
+                    "communicating",
+                    "people",
+                    "research",
+                    "legal"
                 ],
                 "Government & Public Service": [
                     "people",
@@ -1685,10 +2515,31 @@ def recommend_after12th_careers(
             # --------------------------------
             # 3. Stream compatibility
             # --------------------------------
-            if stream.lower() in [
-                item.lower()
+            stream_normalized = stream.strip().lower()
+
+            stream_aliases = {
+                "humanities": "humanities / arts",
+                "humanities/arts": "humanities / arts",
+                "humanities / arts": "humanities / arts",
+                "arts": "humanities / arts",
+                "science": "science",
+                "commerce": "commerce"
+            }
+
+            stream_normalized = stream_aliases.get(
+                stream_normalized,
+                stream_normalized
+            )
+
+            compatible_streams_normalized = [
+                stream_aliases.get(
+                    item.strip().lower(),
+                    item.strip().lower()
+                )
                 for item in compatible_streams
-            ]:
+            ]
+
+            if stream_normalized in compatible_streams_normalized:
                 score += 10
                 match_breakdown["Stream Match"] = 10
 
@@ -1711,12 +2562,41 @@ def recommend_after12th_careers(
                     []
                 )
 
-            if career_domain.lower() in [
-                item.lower() for item in career_directions
-            ]:
+            career_direction_normalized = career_direction.strip().lower()
+            career_domain_normalized = career_domain.strip().lower()
+
+            career_directions_normalized = [
+                item.strip().lower()
+                for item in career_directions
+            ]
+
+            if (
+                career_direction_normalized in career_directions_normalized
+                or career_domain_normalized in career_directions_normalized
+            ):
                 score += 5
                 match_breakdown["Career Direction"] = 5
 
+
+            # Require genuine personal compatibility.
+            # Education careers need a teaching/people/communication
+            # signal in addition to subject compatibility.
+            if career_domain == "Education":
+                meaningful_match = (
+                    match_breakdown["Problem Type"] > 0
+                    or match_breakdown["Work Style"] > 0
+                    or match_breakdown["Skills Match"] > 0
+                )
+            else:
+                meaningful_match = (
+                    match_breakdown["Subject Match"] > 0
+                    or match_breakdown["Problem Type"] > 0
+                    or match_breakdown["Work Style"] > 0
+                    or match_breakdown["Skills Match"] > 0
+                )
+
+            if not meaningful_match:
+                continue
 
             score = min(score, 100)
             # --------------------------------
@@ -1797,8 +2677,18 @@ AFTER_12TH_HIGHER_EDUCATION = {
         "B.Tech / B.E. Computer Science Engineering",
         "B.Tech Artificial Intelligence & Machine Learning",
         "B.Tech Information Technology",
+        "B.Tech Data Science",
+        "B.Tech Cybersecurity",
+        "B.Tech Computer Engineering",
+        "B.Tech Robotics & Automation",
+        "B.Tech Electronics & Communication",
+        "B.Tech Internet of Things (IoT)",
         "B.Sc Computer Science",
-        "B.Sc Data Science"
+        "B.Sc Data Science",
+        "B.Sc Information Technology",
+        "BCA",
+        "BCA with specialization in AI / Data Science",
+        "B.Sc Cybersecurity"
     ],
 
     "Engineering": [
@@ -1806,7 +2696,23 @@ AFTER_12TH_HIGHER_EDUCATION = {
         "B.Tech Mechanical Engineering",
         "B.Tech Civil Engineering",
         "B.Tech Electrical Engineering",
-        "B.Tech Electronics Engineering"
+        "B.Tech Electronics Engineering",
+        "B.Tech Computer Science Engineering",
+        "B.Tech Chemical Engineering",
+        "B.Tech Aerospace Engineering",
+        "B.Tech Automobile Engineering",
+        "B.Tech Biomedical Engineering",
+        "B.Tech Environmental Engineering",
+        "B.Tech Industrial Engineering",
+        "B.Tech Mechatronics Engineering",
+        "B.Tech Robotics Engineering",
+        "B.Tech Manufacturing Engineering",
+        "B.Tech Petroleum Engineering",
+        "B.Tech Mining Engineering",
+        "B.Tech Metallurgical Engineering",
+        "B.Tech Marine Engineering",
+        "B.Tech Agricultural Engineering",
+        "B.Tech Instrumentation & Control Engineering"
     ],
 
     "Medicine & Healthcare": [
@@ -1926,6 +2832,11 @@ def recommend_after12th_higher_education(
         return []
 
     stream = (twelfth_stream or "").strip().lower()
+
+    # Normalize the profile form's Humanities / Arts value
+    # so it uses the existing Arts filtering rules.
+    if stream in {"humanities / arts", "humanities", "arts"}:
+        stream = "arts"
     strongest_subjects = strongest_subjects or ""
     strongest_subjects = [
         subject.strip().lower()

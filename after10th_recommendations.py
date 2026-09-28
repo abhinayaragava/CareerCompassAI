@@ -276,20 +276,46 @@ def recommend_after10th_pathways(
 
         "Science & Mathematics": [
             "science",
+            "scientific",
+            "scientific research",
             "math",
             "mathematics",
+            "numbers",
+            "logical thinking",
+            "problem solving",
+            "problem-solving",
             "physics",
             "chemistry",
-            "research"
+            "biology",
+            "experiments",
+            "laboratory",
+            "research",
+            "research work",
+            "space",
+            "astronomy"
         ],
 
         "Commerce & Business": [
             "commerce",
             "business",
+            "business ideas",
+            "entrepreneurship",
+            "entrepreneur",
             "finance",
+            "financial",
             "accounting",
             "economics",
-            "money"
+            "money",
+            "money management",
+            "investment",
+            "investing",
+            "banking",
+            "marketing",
+            "management",
+            "leadership",
+            "sales",
+            "startup",
+            "startups"
         ],
 
         "Humanities & Social Sciences": [
@@ -297,76 +323,196 @@ def recommend_after10th_pathways(
             "history",
             "geography",
             "politics",
+            "political science",
             "psychology",
             "society",
-            "social"
+            "social",
+            "social science",
+            "people",
+            "human behaviour",
+            "human behavior",
+            "communication",
+            "writing",
+            "reading",
+            "languages",
+            "literature",
+            "law",
+            "justice",
+            "rights",
+            "government",
+            "public service",
+            "teaching",
+            "counselling",
+            "counseling"
         ],
 
         "Computer & Technology": [
             "computer",
+            "computers",
             "technology",
+            "digital technology",
             "programming",
             "coding",
             "software",
+            "software development",
+            "app development",
+            "application development",
+            "web development",
+            "website development",
             "ai",
             "artificial intelligence",
+            "machine learning",
             "cybersecurity",
-            "data"
+            "data",
+            "data science",
+            "app",
+            "apps",
+            "web",
+            "internet"
         ],
 
         "Engineering & Technical": [
             "engineering",
+            "engineer",
             "technical",
             "electronics",
+            "electrical",
             "mechanical",
+            "mechanics",
             "machines",
-            "robotics"
+            "machinery",
+            "robotics",
+            "automation",
+            "construction",
+            "building",
+            "repairing",
+            "repair",
+            "designing machines",
+            "technical work",
+            "hands-on"
         ],
 
         "Medicine & Healthcare": [
             "medicine",
             "medical",
             "healthcare",
+            "health care",
             "doctor",
+            "doctors",
             "nursing",
+            "nurse",
             "pharmacy",
-            "biology"
+            "pharmacist",
+            "biology",
+            "health",
+            "patients",
+            "patient care",
+            "helping patients",
+            "helping people",
+            "physiotherapy",
+            "physiotherapy",
+            "rehabilitation",
+            "fitness",
+            "laboratory",
+            "medical research",
+            "diagnosis",
+            "clinical"
         ],
 
         "Defence & Armed Forces": [
             "defence",
+            "defense",
             "army",
+            "indian army",
             "navy",
+            "indian navy",
             "air force",
+            "indian air force",
             "military",
-            "armed forces"
+            "armed forces",
+            "national security",
+            "security",
+            "uniformed services",
+            "serving the country",
+            "serve the country",
+            "patriotism",
+            "leadership",
+            "discipline",
+            "aviation",
+            "pilot",
+            "defence technology",
+            "defense technology"
         ],
 
         "Police & Uniformed Services": [
             "police",
+            "policing",
             "paramilitary",
             "uniform",
-            "security"
+            "uniformed services",
+            "security",
+            "law enforcement",
+            "public safety",
+            "crime prevention",
+            "emergency services",
+            "emergency response",
+            "community safety",
+            "protecting people",
+            "helping people",
+            "investigation",
+            "investigator",
+            "discipline"
         ],
 
         "Arts, Design & Architecture": [
             "art",
+            "arts",
             "design",
+            "designing",
             "drawing",
+            "sketching",
+            "painting",
             "creative",
+            "creativity",
             "architecture",
+            "architect",
             "fashion",
+            "fashion design",
             "ui",
-            "ux"
+            "ux",
+            "ui/ux",
+            "graphic design",
+            "digital art",
+            "visual design",
+            "interior design",
+            "animation",
+            "photography"
         ],
 
         "Agriculture & Environment": [
             "agriculture",
+            "agricultural",
             "farming",
+            "farmer",
+            "crops",
+            "plants",
+            "plant science",
             "environment",
+            "environmental",
             "nature",
+            "natural resources",
             "sustainability",
-            "forestry"
+            "climate",
+            "climate change",
+            "forestry",
+            "forest",
+            "wildlife",
+            "animals",
+            "soil",
+            "water",
+            "conservation",
+            "organic farming",
+            "horticulture"
         ],
 
         "Sports & Fitness": [
@@ -374,39 +520,117 @@ def recommend_after10th_pathways(
             "sport",
             "fitness",
             "athletics",
+            "athlete",
             "football",
             "cricket",
-            "running"
+            "running",
+            "badminton",
+            "basketball",
+            "volleyball",
+            "tennis",
+            "swimming",
+            "cycling",
+            "gym",
+            "exercise",
+            "physical activity",
+            "physical education",
+            "training",
+            "sports training",
+            "coaching",
+            "sports coaching",
+            "health and fitness",
+            "yoga"
         ],
 
         "Vocational & Skill-Based": [
             "vocational",
             "practical",
+            "practical skills",
             "skill",
-            "hands-on"
+            "skills",
+            "skill-based",
+            "skill based",
+            "hands-on",
+            "hands on",
+            "hands-on work",
+            "practical work",
+            "making things",
+            "building things",
+            "repairing things",
+            "technical work",
+            "craft",
+            "crafts",
+            "trade",
+            "trades",
+            "job-oriented",
+            "job oriented"
         ],
 
         "ITI & Skilled Trades": [
             "iti",
+            "industrial training institute",
             "electrician",
+            "electrical work",
+            "wiring",
             "mechanic",
+            "mechanical work",
             "automobile",
+            "automobile repair",
+            "vehicle repair",
+            "vehicle maintenance",
             "fitter",
-            "welding"
+            "fitting",
+            "welding",
+            "welder",
+            "plumbing",
+            "plumber",
+            "carpentry",
+            "carpenter",
+            "machinist",
+            "machine operator",
+            "repair and maintenance",
+            "skilled trade",
+            "skilled trades"
         ],
 
         "Diploma & Polytechnic": [
             "diploma",
             "polytechnic",
-            "technical diploma"
+            "technical diploma",
+            "diploma engineering",
+            "engineering diploma",
+            "diploma course",
+            "technical course",
+            "technical education",
+            "polytechnic college",
+            "diploma college",
+            "computer diploma",
+            "civil diploma",
+            "mechanical diploma",
+            "electrical diploma",
+            "electronics diploma",
+            "job-oriented diploma",
+            "job oriented diploma"
         ],
 
         "Aviation": [
             "aviation",
             "aircraft",
+            "airplane",
+            "aeroplane",
             "airport",
             "pilot",
-            "aerospace"
+            "flying",
+            "flight",
+            "airline",
+            "airlines",
+            "aerospace",
+            "aircraft maintenance",
+            "air traffic",
+            "airport operations",
+            "aviation technology",
+            "aviation industry",
+            "cabin crew"
         ]
     }
 
@@ -1419,8 +1643,15 @@ def recommend_after10th_careers(
             pathway_points = min(pathway_score, 10)
             score += pathway_points
 
-            # Prevent zero-score careers from appearing.
-            if score <= 0:
+            # Require at least one meaningful personal-interest signal.
+            # Subject-only matches should not create career recommendations.
+            meaningful_match = (
+                career_interest_points > 0
+                or interest_points > 0
+                or activity_points > 0
+            )
+
+            if not meaningful_match:
                 continue
 
             unique_reasons = []
